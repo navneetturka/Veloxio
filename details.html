@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Model 1 Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar for Quick Links -->
+    <div class="nav-bar">
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#specifications">Specifications</a>
+    </div>
+
+    <!-- Photo Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img src="car-top.jpg" alt="Car Top View">
+            <img src="car-front.jpg" alt="Car Front View">
+            <img src="car-interior.jpg" alt="Car Interior View">
+            <!-- Add more images as needed -->
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <!-- Add more dots as needed -->
+        </div>
+    </div>
+
+    <!-- Car Details Section -->
+    <div class="details-section">
+        <!-- Overview -->
+        <section id="overview">
+            <h2>Overview</h2>
+            <ul>
+                <li><strong>Registration Year:</strong> Apr 2022</li>
+                <li><strong>Insurance:</strong> Comprehensive</li>
+                <li><strong>Fuel Type:</strong> Petrol</li>
+                <li><strong>Seats:</strong> 5 Seats</li>
+                <li><strong>Transmission:</strong> Automatic</li>
+                <li><strong>Year of Manufacture:</strong> 2022</li>
+            </ul>
+        </section>
+
+        <!-- Features -->
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Automatic Climate Control</li>
+                <li>Rear AC Vents</li>
+                <li>Engine Start/Stop Button</li>
+                <li>Rear Camera</li>
+                <li>Wireless Charger</li>
+                <!-- Add more features as needed -->
+            </ul>
+        </section>
+
+        <!-- Specifications -->
+        <section id="specifications">
+            <h2>Specifications</h2>
+            <ul>
+                <li><strong>Engine:</strong> 998 cc</li>
+                <li><strong>Power:</strong> 118.35 bhp</li>
+                <li><strong>Transmission:</strong> Automatic</li>
+                <li><strong>Drive Type:</strong> FWD</li>
+                <li><strong>Mileage:</strong> 18.15 kmpl</li>
+                <li><strong>Fuel:</strong> Petrol</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
