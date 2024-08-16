@@ -1,22 +1,31 @@
-let slideIndex = 0;
-showSlides();
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = slides.length;
 
-function showSlides() {
-    let slides = document.querySelectorAll(".slides img");
-    let dots = document.querySelectorAll(".dot");
+function showSlide(index) {
+    if (index >= totalSlides) index = 0;
+    if (index < 0) index = totalSlides - 1;
+    
+    slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${(i - index) * 100}%)`;
+    });
 
-    slides.forEach(slide => slide.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
 
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-
-    slides[slideIndex-1].classList.add('active');
-    dots[slideIndex-1].classList.add('active');
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+    currentIndex = index;
 }
 
-function currentSlide(n) {
-    slideIndex = n;
-    showSlides();
+function changeSlide(direction) {
+    showSlide(currentIndex + direction);
 }
+
+dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+        showSlide(i);
+    });
+});
+
+// Initialize the slider
+showSlide(currentIndex);

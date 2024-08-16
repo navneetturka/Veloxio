@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Model 1 Details</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Car Model 1 - Details</title>
+    <link rel="stylesheet" href="details.css">
 </head>
 <body>
 
-    <!-- Navigation Bar for Quick Links -->
-    <div class="nav-bar">
-        <a href="#overview">Overview</a>
-        <a href="#features">Features</a>
-        <a href="#specifications">Specifications</a>
-    </div>
-
     <!-- Photo Slider -->
-    <div class="slider">
+    <section class="photo-slider">
         <div class="slides">
-            <img src="car-top.jpg" alt="Car Top View">
-            <img src="car-front.jpg" alt="Car Front View">
-            <img src="car-interior.jpg" alt="Car Interior View">
-            <!-- Add more images as needed -->
+            <div class="slide active" style="background-image: url('whitecar.jpg');"></div>
+            <div class="slide" style="background-image: url('whitegwagon.jpg');"></div>
+            <div class="slide" style="background-image: url('whitegwagon.jpg');"></div>
+            <div class="slide" style="background-image: url('whitegwagon.jpg');"></div>
+            <div class="slide" style="background-image: url('whitegwagon.jpg');"></div>
         </div>
-        <div class="dots">
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <!-- Add more dots as needed -->
         </div>
-    </div>
+        <div class="arrow left" onclick="changeSlide(-1)">&#10094;</div>
+        <div class="arrow right" onclick="changeSlide(1)">&#10095;</div>
+    </section>
+    
+
+    <!-- Enhanced Navigation Bar -->
+    <nav class="enhanced-navbar">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#specifications">Specifications</a></li>
+        </ul>
+    </nav>
 
     <!-- Car Details Section -->
-    <div class="details-section">
-        <!-- Overview -->
-        <section id="overview">
+    <section class="car-details">
+        <div id="overview" class="details-block">
             <h2>Overview</h2>
-            <ul>
-                <li><strong>Registration Year:</strong> Apr 2022</li>
-                <li><strong>Insurance:</strong> Comprehensive</li>
-                <li><strong>Fuel Type:</strong> Petrol</li>
-                <li><strong>Seats:</strong> 5 Seats</li>
-                <li><strong>Transmission:</strong> Automatic</li>
-                <li><strong>Year of Manufacture:</strong> 2022</li>
-            </ul>
-        </section>
+            <div class="detail">
+                <span>Registration Year:</span> Apr 2022
+            </div>
+            <div class="detail">
+                <span>Insurance:</span> Comprehensive
+            </div>
+            <div class="detail">
+                <span>Fuel Type:</span> Petrol
+            </div>
+            <div class="detail">
+                <span>Seats:</span> 5 Seats
+            </div>
+            <div class="detail">
+                <span>Transmission:</span> Automatic
+            </div>
+            <div class="detail">
+                <span>Year of Manufacture:</span> 2022
+            </div>
+        </div>
 
-        <!-- Features -->
-        <section id="features">
+        <div id="features" class="details-block">
             <h2>Features</h2>
             <ul>
                 <li>Automatic Climate Control</li>
@@ -55,24 +68,32 @@
                 <li>Engine Start/Stop Button</li>
                 <li>Rear Camera</li>
                 <li>Wireless Charger</li>
-                <!-- Add more features as needed -->
             </ul>
-        </section>
+        </div>
 
-        <!-- Specifications -->
-        <section id="specifications">
+        <div id="specifications" class="details-block">
             <h2>Specifications</h2>
-            <ul>
-                <li><strong>Engine:</strong> 998 cc</li>
-                <li><strong>Power:</strong> 118.35 bhp</li>
-                <li><strong>Transmission:</strong> Automatic</li>
-                <li><strong>Drive Type:</strong> FWD</li>
-                <li><strong>Mileage:</strong> 18.15 kmpl</li>
-                <li><strong>Fuel:</strong> Petrol</li>
-            </ul>
-        </section>
-    </div>
+            <div class="detail">
+                <span>Engine:</span> 998 cc
+            </div>
+            <div class="detail">
+                <span>Power:</span> 118.35 bhp
+            </div>
+            <div class="detail">
+                <span>Transmission:</span> Automatic
+            </div>
+            <div class="detail">
+                <span>Drive Type:</span> FWD
+            </div>
+            <div class="detail">
+                <span>Mileage:</span> 18.15 kmpl
+            </div>
+            <div class="detail">
+                <span>Fuel:</span> Petrol
+            </div>
+        </div>
+    </section>
 
-    <script src="scripts.js"></script>
+    <script src="details.js"></script>
 </body>
 </html>
