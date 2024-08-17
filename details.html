@@ -8,6 +8,27 @@
 </head>
 <body>
 
+    <header>
+        <div class="logo">Veloxio</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Bikes</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for cars or bikes...">
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="#">Home</a> > <a href="#">Cars</a> > SUVs
+    </div>
+
+
     <!-- Photo Slider -->
     <section class="photo-slider">
         <div class="slides">
@@ -27,72 +48,134 @@
     </section>
     
 
-    <!-- Enhanced Navigation Bar -->
+    <!-- Enhanced Navigation Bar
     <nav class="enhanced-navbar">
         <ul>
             <li><a href="#overview">Overview</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#specifications">Specifications</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
     <!-- Car Details Section -->
-    <section class="car-details">
-        <div id="overview" class="details-block">
-            <h2>Overview</h2>
-            <div class="detail">
-                <span>Registration Year:</span> Apr 2022
-            </div>
-            <div class="detail">
-                <span>Insurance:</span> Comprehensive
-            </div>
-            <div class="detail">
-                <span>Fuel Type:</span> Petrol
-            </div>
-            <div class="detail">
-                <span>Seats:</span> 5 Seats
-            </div>
-            <div class="detail">
-                <span>Transmission:</span> Automatic
-            </div>
-            <div class="detail">
-                <span>Year of Manufacture:</span> 2022
-            </div>
+    <div class="details-section">
+        <!-- Navigation Bar -->
+        <div class="details-nav">
+          <a href="#overview">Overview</a>
+          <a href="#features">Features</a>
+          <a href="#specifications">Specifications</a>
+        </div>
+      
+        <!-- Overview Section -->
+        <div id="overview" class="detail-div">
+          <h2>Overview</h2>
+          <p>Registration Year: 2020</p>
+          <p>Insurance: Comprehensive</p>
+          <p>Fuel Type: Petrol</p>
+          <p>Seats: 5</p>
+          <p>Transmission: Automatic</p>
+          <p>Year of Manufacture: 2019</p>
+        </div>
+      
+        <!-- Features Section -->
+        <div id="features" class="detail-div">
+          <h2>Features</h2>
+          <ul>
+            <li>Automatic Climate Control</li>
+            <li>Rear AC Vents</li>
+            <li>Engine Start/Stop Button</li>
+            <li>Rear Camera</li>
+            <li>Wireless Charger</li>
+          </ul>
+        </div>
+      
+        <!-- Specifications Section -->
+        <div id="specifications" class="detail-div">
+          <h2>Specifications</h2>
+          <p>Engine: 2.0L Turbocharged</p>
+          <p>Power: 250 HP</p>
+          <p>Transmission: 8-Speed Automatic</p>
+          <p>Drive Type: All-Wheel Drive</p>
+          <p>Mileage: 15 km/l</p>
+          <p>Fuel: Petrol</p>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+      <section class="today_deals_container">
+        <div class="today_deals_heading">
+            <h1>Today's Deals</h1>
+            <p><a href="#">See all deals</a></p>
         </div>
 
-        <div id="features" class="details-block">
-            <h2>Features</h2>
-            <ul>
-                <li>Automatic Climate Control</li>
-                <li>Rear AC Vents</li>
-                <li>Engine Start/Stop Button</li>
-                <li>Rear Camera</li>
-                <li>Wireless Charger</li>
-            </ul>
-        </div>
+        <div class="today_deals_product_container">
+            <div class="today_deals_btn_container">
+                <button  class="today_deal_btn" id="today_deal_btn_prev">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="today_deal_btn" id="today_deal_btn_next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
 
-        <div id="specifications" class="details-block">
-            <h2>Specifications</h2>
-            <div class="detail">
-                <span>Engine:</span> 998 cc
-            </div>
-            <div class="detail">
-                <span>Power:</span> 118.35 bhp
-            </div>
-            <div class="detail">
-                <span>Transmission:</span> Automatic
-            </div>
-            <div class="detail">
-                <span>Drive Type:</span> FWD
-            </div>
-            <div class="detail">
-                <span>Mileage:</span> 18.15 kmpl
-            </div>
-            <div class="detail">
-                <span>Fuel:</span> Petrol
+            <div class="today_deals_product_list">
+                <div class="today_deals_product_item">
+                    <img src="whitecar.jpg"/>
+                    <div class="discount_Contaienr">
+                        <a href="#">Up to 52% off</a>
+                        <a href="#">Deal of the day</a>
+                    </div>
+                    <p>adidas and Campus Footwear</p>
+                </div>
+
+                <div class="today_deals_product_item">
+                    <img src="whitegwagon.jpg"/>
+                    <div class="discount_Contaienr">
+                        <a href="#">Up to 52% off</a>
+                        <a href="#">Deal of the day</a>
+                    </div>
+                    <p>adidas and Campus Footwear</p>
+                </div>
+
+                <div class="today_deals_product_item">
+                    <img src="redcar.jpg"/>
+                    <div class="discount_Contaienr">
+                        <a href="#">Up to 52% off</a>
+                        <a href="#">Deal of the day</a>
+                    </div>
+                    <p>adidas and Campus Footwear</p>
+                </div>
+
+                <div class="today_deals_product_item">
+                    <img src="blackcar.jpg"/>
+                    <div class="discount_Contaienr">
+                        <a href="#">Up to 52% off</a>
+                        <a href="#">Deal of the day</a>
+                    </div>
+                    <p>adidas and Campus Footwear</p>
+                </div>
+
+                <div class="today_deals_product_item">
+                    <img src="harley-davidson.jpg"/>
+                    <div class="discount_Contaienr">
+                        <a href="#">Up to 52% off</a>
+                        <a href="#">Deal of the day</a>
+                    </div>
+                    <p>adidas and Campus Footwear</p>
+                </div>
             </div>
         </div>
     </section>
+
+
+
 
     <script src="details.js"></script>
 </body>
