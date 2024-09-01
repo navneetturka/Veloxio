@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #051923;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s; /* Add a transition to the body background color */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #051923; /* Dark blue background */
+    padding: 15px 20px;
+    border-bottom: 2px solid #00A6FB;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.5s, box-shadow 0.5s; /* Add transitions to the navbar background color and box shadow */
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 3rem;
+    margin-right: 10px;
+}
+
+/* Navbar links */
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: #00A6FB; /* Light blue color for links */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Add transitions to the link background color, text color, and transform */
+}
+
+/* Hover effects */
+.navbar .nav-links a:hover {
+    background-color: #0e73a1; /* Darker blue on hover */
+    color: #051923; /* Very dark blue text on hover */
+    border-radius: 5px;
+    
+}
+
+/* Login/Sign Up button style */
+.navbar .login-btn {
+    background-color: #00A6FB; /* Light blue button */
+    color: #051923; /* Very dark blue text */
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.5s; /* Add transitions to the button background color, text color, and box shadow */
+}
+
+.navbar .login-btn:hover {
+    background-color: #0582CA; /* Slightly darker blue on hover */
+    color: #003554; /* Darker blue text on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+}
+
+/* Reset password form styles */
+.reset-box {
+    background:linear-gradient( #253c4d, rgb(24,86,90), #253c4d);;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px lightblue;
+    transition: transform 0.5s; /* Add a transition to the reset password form */
+}
+
+.reset-box:hover {
+    transform: scale(1.05); /* Add a subtle scale effect on hover */
+}
+
+.input-box {
+    margin-bottom: 40px;
+    transition: background-color 0.3s; /* Add a transition to the input box background color */
+}
+
+.input-box:hover {
+    background-color: #0a2836; /* Darker blue on hover */
+    color: #00A6FB;
+}
+
+.input-box input[type="password"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: border-color 0.3s; /* Add a transition to the input border color */
+}
+
+.input-box input[type="password"]:focus {
+    border-color: #00A6FB; /* Light blue border color on focus */
+}
+
+.input-box label {
+    font-size: 18px;
+    transition: color 0.3s; /* Add a transition to the label text color */
+}
+
+.input-box label:hover {
+    color: #0582CA; /* Slightly darker blue on hover */
+}
+
+button[type="submit"] {
+    background-color: #00A6FB; /* Light blue button */
+    color: #051923; /* Very dark blue text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s; /* Add transitions to the button background color and text color */
+}
+
+button[type="submit"]:hover {
+    background-color: #0582CA; /* Slightly darker blue on hover */
+    color: #fafdff; /* Darker blue text on hover */
+}
