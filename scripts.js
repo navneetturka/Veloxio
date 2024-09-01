@@ -43,3 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.getElementById('category').addEventListener('change', function() {
+    // Get the selected value from the dropdown
+    var selectedCategory = this.value;
+
+    // Redirect based on the selected option
+    if (selectedCategory === 'cars') {
+        window.location.href = 'cars.html'; // Open cars.html in the same tab
+    } else if (selectedCategory === 'bikes') {
+        window.location.href = 'bikes.html'; // Open bikes.html in the same tab
+    }
+});

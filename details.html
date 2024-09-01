@@ -13,9 +13,10 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
+                <li><a href="#">Collection</a></li>
                 <li><a href="#">Cars</a></li>
                 <li><a href="#">Bikes</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#">Login</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -28,34 +29,19 @@
         <a href="#">Home</a> > <a href="#">Cars</a> > SUVs
     </div>
 
-
     <!-- Photo Slider -->
-    <section class="photo-slider">
-        <div class="slides">
-            <div class="slide active" style="background-image: url('whitecar.jpg');"></div>
-            <div class="slide" style="background-image: url('whitegwagon.jpg');"></div>
-            <div class="slide" style="background-image: url('whitegwagon.jpg');"></div>
-            <div class="slide" style="background-image: url('whitegwagon.jpg');"></div>
-            <div class="slide" style="background-image: url('whitegwagon.jpg');"></div>
+    <div class="carousel-container">
+        <div class="carousel">
+          <div class="slide"><img src="whitegwagon.jpg" alt="Image 1"></div>
+          <div class="slide"><img src="redcar.jpg" alt="Image 2"></div>
+          <div class="slide"><img src="blackcar.jpg" alt="Image 3"></div>
+          <div class="slide"><img src="blackcar2.jpg" alt="Image 4"></div>
+          <div class="slide"><img src="bmw.jpg" alt="Image 5"></div>
         </div>
-        <div class="slider-dots">
-            <span class="dot active" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
-        <div class="arrow left" onclick="changeSlide(-1)">&#10094;</div>
-        <div class="arrow right" onclick="changeSlide(1)">&#10095;</div>
-    </section>
-    
-
-    <!-- Enhanced Navigation Bar
-    <nav class="enhanced-navbar">
-        <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#specifications">Specifications</a></li>
-        </ul>
-    </nav> -->
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+        <div class="dots-container"></div>
+      </div>
 
     <!-- Car Details Section -->
     <div class="details-section">

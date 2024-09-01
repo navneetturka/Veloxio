@@ -9,25 +9,27 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">Veloxio</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Cars</a></li>
-                <li><a href="#">Bikes</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Website Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Collections</a>
+            <button class="login-btn">Login/Sign Up</button>
+        </div>
         <div class="search-bar">
             <input type="text" placeholder="Search for cars or bikes...">
         </div>
-    </header>
-
-    <div class="breadcrumb">
-        <a href="#">Home</a> > <a href="#">Cars</a> > SUVs
     </div>
+        
+    
+
+    <!-- <div class="breadcrumb">
+        <a href="#">Home</a> > <a href="#">Cars</a> > SUVs
+    </div> -->
 
     <div class="main-content">
         <aside class="sidebar">
@@ -44,10 +46,10 @@
                 </select>
             </div>
             <div class="filter">
-                <label>Category:</label>
-                <select>
-                    <option>Cars</option>
-                    <option>Bikes</option>
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="cars">Cars</option>
+                    <option value="bikes">Bikes</option>
                 </select>
             </div>
             <div class="filter">
