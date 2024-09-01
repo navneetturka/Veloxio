@@ -1,15 +1,20 @@
-body {
-    font-family: 'Arial', sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
     background-color: #051923;
 }
 
+body {
+    background-color: #11141A; /* Dark background color similar to the image */
+    color: #ffffff;
 /* Navbar container */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
     background-color: #051923; /* Dark blue background */
     padding: 15px 20px;
     border-bottom: 2px solid #00A6FB;
@@ -122,9 +127,9 @@ header nav ul li a:hover {
     padding: 15px 20px;
     background-color: #eee;
     margin: 0;
-    font-size: 14px;
 }
 
+.container {
 .breadcrumb a {
     color: #1F7A8C;
     text-decoration: none;
@@ -136,361 +141,142 @@ header nav ul li a:hover {
 
 .main-content {
     display: flex;
-    margin: 20px;
-    /* width: 100%;
-    height: 100%; */
-}
-
-.sidebar {
-    width: 100%;
-    height: 550px;
-    background-color: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
     padding: 20px;
-    border-radius: 5px;
-    margin-right: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar h3 {
-    margin-top: 0;
-    font-size: 24px;
-    border-bottom: 2px solid #1F7A8C;
-    padding-bottom: 10px;
+.left-section {
+    width: 40%;
+    margin-right: 200px;
+    margin-top: 70px;
 }
 
-.filter {
+.left-section h1 {
+    font-size: 48px;
+    font-weight: bold;
     margin-bottom: 20px;
-    position: relative;
 }
 
-.filter label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
 
-.filter select,
-.filter input[type="range"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-.filter select:hover,
-.filter input[type="range"]:hover {
-    border-color: #1F7A8C;
-}
-
-.filter input[type="range"] {
-    /* -webkit-appearance: none; */
-    height: 8px;
-    background: #ddd;
-    border-radius: 5px;
-    outline: none;
-    transition: background 0.3s ease;
-}
-
-.filter input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #1F7A8C;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s ease;
-}
-
-.filter input[type="range"]::-webkit-slider-thumb:hover {
-    background: #1F7A8C;
-}
-
-.filter input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #1F7A8C;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s ease;
-}
-
-.filter input[type="range"]::-moz-range-thumb:hover {
-    background: #1F7A8C;
-}
-
-.filter input[type="range"]::-ms-thumb {
-    width: 20px;
-    height: 20px;
-    background: #1F7A8C;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s ease;
-}
-
-.filter input[type="range"]::-ms-thumb:hover {
-    background: #1F7A8C;
-}
-
-.price-range {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.price-labels {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
-}
-
-#min-price, #max-price {
-    font-weight: bold;
-}
-
-.product-listings {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    flex-grow: 1;
-}
-
-.product-card {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.product-card .image-container {
-    overflow: hidden;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.product-card img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.product-card:hover img {
-    transform: scale(1.1);
-    opacity: 0.9;
-}
-
-.product-card h4 {
-    margin: 10px 0;
+.left-section p {
     font-size: 18px;
+    color: #b0b0b0; /* Light gray color for the text */
 }
 
-.product-card p {
-    margin: 5px 0;
-    color: #333;
+.right-section {
+    width: 55%;
 }
 
-.product-card button {
-    background-color: #1F7A8C;
-    color: #fff;
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 48%;
+    padding: 15px;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-bottom: 1px solid #b0b0b0; /* Light gray border */
+    background-color: #11141A;
+    color: #ffffff;
+    font-size: 16px;
 }
 
-.product-card button:hover {
-    background-color: #1F7A8C;
-    transform: scale(1.05);
-}
-/* Chat Support Button */
-.chat-support {
-    margin-top: 20px;
+.form-group textarea {
+    width: 100%;
 }
 
-#chat-toggle {
-    background-color: #1F7A8C;
-    color: #fff;
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    color: #11141A;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-#chat-toggle:hover {
-    background-color: #1F7A8C;
+button[type="submit"]:hover {
+    background-color: #bbbbbb;
 }
 
-/* Chat Dialog */
-.chat-dialog {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 280px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    border-radius: 8px;
-    display: none; /* Initially hidden */
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(20px);
+button[type="submit"]:active {
+    background-color: #888888;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-.chat-dialog.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+.social-icons a {
+    margin: 0 10px;
+    color: gray; /* Replace with your theme color */
+    font-size: 25px;
 }
 
-.chat-header {
-    background: #1F7A8C;
-    color: #fff;
-    padding: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.social-icons a:hover {
+    color: whitesmoke; /* Optional hover effect */
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background-color: #1a1d23; /* Slightly lighter than your page background */
+    padding: 20px 0;
+    position: fixed; /* Make the navbar stay at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.nav-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#chat-close {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.chat-body {
-    padding: 10px;
-}
-
-.chat-messages {
-    max-height: 200px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-}
-
-#chat-input {
-    width: calc(100% - 70px);
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-#send-message {
-    background-color:#1F7A8C;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#send-message:hover {
-    background-color: #1F7A8C;
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
-
-.pagination button {
-    background-color:#1F7A8C;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.pagination button:hover {
-    background-color: #1F7A8C;
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.footer-section {
-    width: 30%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.footer-section h4 {
-    margin-top: 0;
-    font-size: 18px;
-    border-bottom: 2px solid #1F7A8C;
-    padding-bottom: 5px;
-}
-
-.footer-section p,
-.footer-section a {
-    margin: 5px 0;
-    color: #ddd;
+.nav-logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
     text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-item {
+    margin-left: 30px;
+}
+
+.nav-link {
+    color: #b0b0b0; /* Light gray color for the links */
+    text-decoration: none;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
-.footer-section p:hover,
-.footer-section a:hover {
-    color: #fff;
+.nav-link:hover {
+    color: #ffffff; /* White color on hover */
+}
+.nav-logo img {
+    height: 50px; /* Adjust height as needed */
+    width: auto;  /* Maintain aspect ratio */
+    display: block; /* Ensures the image is treated as a block-level element */
 }
 
-.footer-section a {
-    display: block;
-}
-
-.social-media .social-icon {
-    display: inline-block;
-    background-color: #444;
-    color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    margin: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.social-media .social-icon:hover {
-    background-color: #1F7A8C;
-    transform: scale(1.1);
-}
-
-.footer-bottom {
-    border-top: 1px solid #444;
-    padding: 10px;
-    font-size: 14px;
-}
 
