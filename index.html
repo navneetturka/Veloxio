@@ -1,218 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veloxio - Product Listings</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <div class="logo">Veloxio</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Cars</a></li>
-                <li><a href="#">Bikes</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="carex.jpeg" alt="Veloxio Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search for cars or bikes...">
         </div>
-    </header>
-
-    <div class="breadcrumb">
-        <a href="#">Home</a> > <a href="#">Cars</a> > SUVs
+    </nav>
+    
+    <div class="container">
+        <div class="left-section">
+            <h1>Get in touch.</h1>
+            <p>Looking for your next ride? Let us know what you're looking for, and we'll help you hit the road in style</p>
+        </div>
+        <div class="right-section">
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="company" name="company" placeholder="Company" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+                <div class="social-icons">
+                    <a href="https://your-facebook-profile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://your-twitter-profile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://your-instagram-profile" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </form>
+        </div>
     </div>
 
-    <div class="main-content">
-        <aside class="sidebar">
-            <h3>Filters</h3>
-            <div class="filter">
-                <label>Sort By:</label>
-                <select id="sort-by">
-                    <option value="price-asc">Price: Low to High</option>
-                    <option value="price-desc">Price: High to Low</option>
-                    <option value="popularity">Popularity</option>
-                    <option value="rating">Rating</option>
-                    <option value="date-newest">Newest</option>
-                    <option value="date-oldest">Oldest</option>
-                </select>
-            </div>
-            <div class="filter">
-                <label>Category:</label>
-                <select>
-                    <option>Cars</option>
-                    <option>Bikes</option>
-                </select>
-            </div>
-            <div class="filter">
-                <label>Brand:</label>
-                <select>
-                    <option>All Brands</option>
-                    <option>Honda</option>
-                    <option>Yamaha</option>
-                </select>
-            </div>
-            <div class="filter">
-                <label>Price Range:</label>
-                <div class="price-range">
-                    <input type="range" id="price-range" min="0" max="100000" step="1000" value="50000">
-                    <div class="price-labels">
-                        <span id="min-price">$0</span> - <span id="max-price">$50000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="filter">
-                <label>Condition:</label>
-                <select>
-                    <option>New</option>
-                    <option>Used</option>
-                </select>
-            </div>
-
-            <!-- Chat Support -->
-            <div class="chat-support">
-                <button id="chat-toggle">Chat with Us</button>
-            </div>
-
-            <div id="chat-dialog" class="chat-dialog">
-                <div class="chat-header">
-                    <h4>Chat Support</h4>
-                    <button id="chat-close">&times;</button>
-                </div>
-                <div class="chat-body">
-                    <div class="chat-messages">
-                        <!-- Messages will be displayed here -->
-                    </div>
-                    <textarea id="chat-input" placeholder="Type your question..."></textarea>
-                    <button id="send-message">Send</button>
-                </div>
-            </div>
-
-        </aside>
-
-
-        <section class="product-listings">
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="whitecar.jpg" alt="Car 1">
-                </div>
-                <h4>2022 Honda Civic</h4>
-                <p>Rs. 11.35 - 17.60 Lakh</p>
-                <p>Features: Automatic, 150 HP, Red</p>
-                <button>View Details</button>
-            </div>
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="motorbike.jpg" alt="Bike 1">
-                </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs. 4.50 Lakh</p>
-                <p>Features: Manual, 200 HP, Blue</p>
-                <button>View Details</button>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="blackcar.jpg" alt="Car 1">
-                </div>
-                <h4>2022 Honda Civic</h4>
-                <p>Rs. 11 - 20.15 Lakh</p>
-                <p>Features: Automatic, 150 HP, Red</p>
-                <button>View Details</button>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="greyroyalenfield.jpg" alt="Car 1">
-                </div>
-                <h4>2022 Honda Civic</h4>
-                <p>Rs. 25,000</p>
-                <p>Features: Automatic, 150 HP, Red</p>
-                <button>View Details</button>
-            </div>
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="gwagon.jpg" alt="Bike 1">
-                </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs. 9.79 - 10.91 Lakh</p>
-                <p>Features: Manual, 200 HP, Blue</p>
-                <button>View Details</button>
-            </div>
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="redcar.jpg" alt="Bike 1">
-                </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs13.62 - 17.42 Lakh</p>
-                <p>Features: Manual, 200 HP, Blue</p>
-                <button>View Details</button>
-            </div>
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="whitegwagon.jpg" alt="Bike 1">
-                </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs. 2.05 Cr</p>
-                <p>Features: Manual, 200 HP, Blue</p>
-                <button>View Details</button>
-            </div>
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="blackcar2.jpg" alt="Bike 1">
-                </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs. 49.50 - 52.50 Lakh</p>
-                <p>Features: Manual, 200 HP, Blue</p>
-                <button>View Details</button>
-            </div>
-            
-
-            <!-- Add more product cards as needed -->
-        </section>
-    </div>
-
-    <div class="pagination">
-        <button>&lt; Previous</button>
-        <button>Next &gt;</button>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section contact-info">
-                <h4>Contact Us</h4>
-                <p>Email: support@veloxio.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
-                <p>Address: 1234 Elm Street, Anytown, USA</p>
-            </div>
-            <div class="footer-section social-media">
-                <h4>Follow Us</h4>
-                <a href="#" class="social-icon">Facebook</a>
-                <a href="#" class="social-icon">Twitter</a>
-                <a href="#" class="social-icon">Instagram</a>
-                <a href="#" class="social-icon">LinkedIn</a>
-            </div>
-            <div class="footer-section site-links">
-                <h4>Site Links</h4>
-                <a href="#">Home</a>
-                <a href="#">Cars</a>
-                <a href="#">Bikes</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Veloxio. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
