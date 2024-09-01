@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection of cars and bikes</title>
+    <link rel="stylesheet" href="collections.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Website Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+            <a href="collections.html">Collections</a>
+            <button class="login-btn">Login/Sign Up</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for cars or bikes...">
+        </div>
+    </div>
+
+    <div class="main-content">
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            <div class="filter">
+                <label>Sort By:</label>
+                <select id="sort-by">
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="popularity">Trending</option>
+                    <option value="date-newest">Newest</option>
+                    <option value="date-oldest">Oldest</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label>Category:</label>
+                <select>
+                    <option>Cars</option>
+                    <option>Bikes</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label>Brand:</label>
+                <select>
+                    <option>All Brands</option>
+                    <option>Maruti</option>
+                    <option>Tata</option>
+                    <option>Volkswagen</option>
+                    <option>MG</option>
+                    <option>Jeep</option>
+                    <option>Skoda</option>
+                    <option>Audi</option>
+                    <option>Bentley</option>
+                    <option>BMW</option>
+                    <option>Jaguar</option>
+                    <option>Ferrari</option>
+                    <option>Lamborghini</option>
+                    <option>Mercedes-Benz</option>
+                    <option>Porshe</option>
+                    <option>Rolls-Royce</option>
+                    <option>Volvo</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label>Price Range:</label>
+                <div class="price-range">
+                    <input type="range" id="price-range" min="0" max="100000" step="1000" value="50000">
+                    <div class="price-labels">
+                        <span id="min-price">$0</span> - <span id="max-price">$70000000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter">
+                <label>Condition:</label>
+                <select>
+                    <option>New</option>
+                    <option>Used</option>
+                </select>
+            </div>
+
+            <!-- Chat Support -->
+            <div class="chat-support">
+                <button id="chat-toggle">Chat with Us</button>
+            </div>
+
+            <div id="chat-dialog" class="chat-dialog">
+                <div class="chat-header">
+                    <h4>Chat Support</h4>
+                    <button id="chat-close">&times;</button>
+                </div>
+                <div class="chat-body">
+                    <div class="chat-messages">
+                        <!-- Messages will be displayed here -->
+                    </div>
+                    <textarea id="chat-input" placeholder="Type your question..."></textarea>
+                    <button id="send-message">Send</button>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <section class="product-listings">
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="whitecar.jpg" alt="Car 1">
+                </div>
+                <h4>2022 Honda Civic</h4>
+                <p>Rs. 11.35 - 17.60 Lakh</p>
+                <p>Features: Automatic, 150 HP, Red</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="motorbike.jpg" alt="Bike 1">
+                </div>
+                <h4>2022 Yamaha R1</h4>
+                <p>Rs. 4.50 Lakh</p>
+                <p>Features: Manual, 200 HP, Blue</p>
+                <button>View Details</button>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="blackcar.jpg" alt="Car 1">
+                </div>
+                <h4>2022 Honda Civic</h4>
+                <p>Rs. 11 - 20.15 Lakh</p>
+                <p>Features: Automatic, 150 HP, Red</p>
+                <button>View Details</button>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="greyroyalenfield.jpg" alt="Car 1">
+                </div>
+                <h4>2022 Honda Civic</h4>
+                <p>Rs. 25,000</p>
+                <p>Features: Automatic, 150 HP, Red</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="gwagon.jpg" alt="Bike 1">
+                </div>
+                <h4>2022 Yamaha R1</h4>
+                <p>Rs. 9.79 - 10.91 Lakh</p>
+                <p>Features: Manual, 200 HP, Blue</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="redcar.jpg" alt="Bike 1">
+                </div>
+                <h4>2022 Yamaha R1</h4>
+                <p>Rs13.62 - 17.42 Lakh</p>
+                <p>Features: Manual, 200 HP, Blue</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="whitegwagon.jpg" alt="Bike 1">
+                </div>
+                <h4>2022 Yamaha R1</h4>
+                <p>Rs. 2.05 Cr</p>
+                <p>Features: Manual, 200 HP, Blue</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="blackcar2.jpg" alt="Bike 1">
+                </div>
+                <h4>2022 Yamaha R1</h4>
+                <p>Rs. 49.50 - 52.50 Lakh</p>
+                <p>Features: Manual, 200 HP, Blue</p>
+                <button>View Details</button>
+            </div>
+
+
+            <!-- Add more product cards as needed -->
+        </section>
+    </div>
+
+    <div class="pagination">
+        <a href="next-page1.html">
+            <button>&lt; Previous</button>
+        </a>
+        <a href="next-page3.html">
+            <button>Next &gt;</button>
+        </a>
+        
+    </div>
+
+
+    <script src="collections.js"></script>
+</body>
+
+</html>

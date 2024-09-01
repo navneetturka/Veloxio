@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection of cars and bikes</title>
+    <link rel="stylesheet" href="collections.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Website Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Contact Us</a>
+            <a href="collections.html">Collections</a>
+            <button class="login-btn">Login/Sign Up</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for cars or bikes...">
+        </div>
+    </div>
+
+    <div class="main-content">
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            <div class="filter">
+                <label>Sort By:</label>
+                <select id="sort-by">
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="popularity">Trending</option>
+                    <option value="date-newest">Newest</option>
+                    <option value="date-oldest">Oldest</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label>Category:</label>
+                <select>
+                    <option>Cars</option>
+                    <option>Bikes</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label>Brand:</label>
+                <select>
+                    <option>All Brands</option>
+                    <option>Maruti</option>
+                    <option>Tata</option>
+                    <option>Volkswagen</option>
+                    <option>MG</option>
+                    <option>Jeep</option>
+                    <option>Skoda</option>
+                    <option>Audi</option>
+                    <option>Bentley</option>
+                    <option>BMW</option>
+                    <option>Jaguar</option>
+                    <option>Ferrari</option>
+                    <option>Lamborghini</option>
+                    <option>Mercedes-Benz</option>
+                    <option>Porshe</option>
+                    <option>Rolls-Royce</option>
+                    <option>Volvo</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label>Price Range:</label>
+                <div class="price-range">
+                    <input type="range" id="price-range" min="0" max="100000" step="1000" value="50000">
+                    <div class="price-labels">
+                        <span id="min-price">$0</span> - <span id="max-price">$70000000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter">
+                <label>Condition:</label>
+                <select>
+                    <option>New</option>
+                    <option>Used</option>
+                </select>
+            </div>
+
+            <!-- Chat Support -->
+            <div class="chat-support">
+                <button id="chat-toggle">Chat with Us</button>
+            </div>
+
+            <div id="chat-dialog" class="chat-dialog">
+                <div class="chat-header">
+                    <h4>Chat Support</h4>
+                    <button id="chat-close">&times;</button>
+                </div>
+                <div class="chat-body">
+                    <div class="chat-messages">
+                        <!-- Messages will be displayed here -->
+                    </div>
+                    <textarea id="chat-input" placeholder="Type your question..."></textarea>
+                    <button id="send-message">Send</button>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <section class="product-listings">
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="jaguar f type.webp" alt="Car1">
+                </div>
+                <h4>Jaguar F type</h4>
+                <p>Rs. 1 to 1.56 cr</p>
+                <p>Features: .2.0 L 4-cylinder<br>5.0 L V8 diesel.Manual<br>443.8bhp@6000rpmhp</p>
+                <button>View Details</button>
+            </div>
+            
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="altok10.webp" alt="Car1">
+                </div>
+                <h4>Alto K10</h4>
+                <p>Rs. 5 lakh </p>
+                <p>Features: 3 cylinder<br>55.92bhp@5300rpm.Manual<br>55 bhp</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="rollsroyace-phantom.jpg" alt="Car1">
+                </div>
+                <h4>Rolls royce phantom </h4>
+                <p>Rs. 899 Cr to 10.48 Cr</p>
+                <p>Features: 6.7 L V12<br>Auto,petrol<br>563bhp@5000rpmBlue</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Nano.webp" alt="Car1">
+                </div>
+                <h4>Nano</h4>
+                <p>Rs. 2 lakh</p>
+                <p>Features: Petrol engine is 624 cc<br>while the CNG engine is 624 cc .Manual<br>37 bhp</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="merc.jpg" alt="Car1">
+                </div>
+                <h4>Mercedes</h4>
+                <p>Rs. 76 lakh</p>
+                <p>Features: .6 cylinder 281.61bhp@3400-4600rpm<br>diesel.Manual, , hp 255Blue</p>
+                <button>View Details</button>
+            </div>
+
+            <!-- Add more product cards as needed -->
+        </section>
+    </div>
+
+    <div class="pagination">
+        <a href="collections.html">
+            <button>&lt; Previous</button>
+        </a>
+        
+        <a href="next-page2.html">
+            <button>Next &gt;</button>
+        </a>
+        
+    </div>
+
+    <script src="collections.js"></script>
+</body>
+
+</html>

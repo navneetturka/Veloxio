@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veloxio - Product Listings</title>
+    <title>Collection of cars and bikes</title>
     <link rel="stylesheet" href="collections.css">
 </head>
 
@@ -17,17 +17,13 @@
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#">Contact Us</a>
-            <a href="#">Collections</a>
+            <a href="collections.html">Collections</a>
             <button class="login-btn">Login/Sign Up</button>
         </div>
         <div class="search-bar">
             <input type="text" placeholder="Search for cars or bikes...">
         </div>
     </div>
-
-    <!-- <div class="breadcrumb">
-        <a href="#">Home</a> > <a href="#">Cars</a> > SUVs
-    </div> -->
 
     <div class="main-content">
         <aside class="sidebar">
@@ -37,8 +33,7 @@
                 <select id="sort-by">
                     <option value="price-asc">Price: Low to High</option>
                     <option value="price-desc">Price: High to Low</option>
-                    <option value="popularity">Popularity</option>
-                    <option value="rating">Rating</option>
+                    <option value="popularity">Trending</option>
                     <option value="date-newest">Newest</option>
                     <option value="date-oldest">Oldest</option>
                 </select>
@@ -54,8 +49,22 @@
                 <label>Brand:</label>
                 <select>
                     <option>All Brands</option>
-                    <option>Honda</option>
-                    <option>Yamaha</option>
+                    <option>Maruti</option>
+                    <option>Tata</option>
+                    <option>Volkswagen</option>
+                    <option>MG</option>
+                    <option>Jeep</option>
+                    <option>Skoda</option>
+                    <option>Audi</option>
+                    <option>Bentley</option>
+                    <option>BMW</option>
+                    <option>Jaguar</option>
+                    <option>Ferrari</option>
+                    <option>Lamborghini</option>
+                    <option>Mercedes-Benz</option>
+                    <option>Porshe</option>
+                    <option>Rolls-Royce</option>
+                    <option>Volvo</option>
                 </select>
             </div>
             <div class="filter">
@@ -63,7 +72,7 @@
                 <div class="price-range">
                     <input type="range" id="price-range" min="0" max="100000" step="1000" value="50000">
                     <div class="price-labels">
-                        <span id="min-price">$0</span> - <span id="max-price">$50000</span>
+                        <span id="min-price">$0</span> - <span id="max-price">$70000000</span>
                     </div>
                 </div>
             </div>
@@ -100,115 +109,184 @@
         <section class="product-listings">
             <div class="product-card">
                 <div class="image-container">
-                    <img src="whitecar.jpg" alt="Car 1">
+                    <img src="scorpio-s.webp" alt="Car1">
                 </div>
-                <h4>2022 Honda Civic</h4>
-                <p>Rs. 11.35 - 17.60 Lakh</p>
-                <p>Features: Automatic, 150 HP, Red</p>
+                <h4>Scorpio s </h4>
+                <p>Rs.17.42 Lakh</p>
+                <p>.0 L 4-cylinder<br>2.2 L 4-cylinder diesel.Manual<br>hp 128</p>
                 <button>View Details</button>
             </div>
             <div class="product-card">
                 <div class="image-container">
-                    <img src="motorbike.jpg" alt="Bike 1">
+                    <img src="Mustang.jpg" alt="Car1">
                 </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs. 4.50 Lakh</p>
-                <p>Features: Manual, 200 HP, Blue</p>
+                <h4>Mustang</h4>
+                <p>Rs. 70Lakh</p>
+                <p>Features: 5.0L v8: Manual<br>hp 315-500</p>
                 <button>View Details</button>
             </div>
 
             <div class="product-card">
                 <div class="image-container">
-                    <img src="blackcar.jpg" alt="Car 1">
+                    <img src="Tharrr.webp" alt="Car1">
                 </div>
-                <h4>2022 Honda Civic</h4>
-                <p>Rs. 11 - 20.15 Lakh</p>
-                <p>Features: Automatic, 150 HP, Red</p>
+                <h4>Thar</h4>
+                <p>Rs. 20 Lakh</p>
+                <p>Features: .0 2.0 L 4-cylinder<br>2.2 L 4-cylinder diesel.Manual<br>hp  130.07bhp@3750rpm</p>
                 <button>View Details</button>
             </div>
 
             <div class="product-card">
                 <div class="image-container">
-                    <img src="greyroyalenfield.jpg" alt="Car 1">
+                    <img src="merc-gclass.jpg" alt="Car1">
                 </div>
-                <h4>2022 Honda Civic</h4>
-                <p>Rs. 25,000</p>
-                <p>Features: Automatic, 150 HP, Red</p>
+                <h4>Mercedes G class</h4>
+                <p>Rs. 2.50 cr</p>
+                <p>Features: .8cylinder<br>twin-turbocharged<br>4.0-liter V-8 engine Petrol.Manual<br>auto ,576.63bhp</p>
                 <button>View Details</button>
             </div>
             <div class="product-card">
                 <div class="image-container">
-                    <img src="gwagon.jpg" alt="Bike 1">
+                    <img src="bmwm4.jpg" alt="Car1">
                 </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs. 9.79 - 10.91 Lakh</p>
-                <p>Features: Manual, 200 HP, Blue</p>
+                <h4>BMW M4</h4>
+                <p>Rs. 1.53 cr</p>
+                <p>Features: . twin-turbocharged 3.0-liter inline-six diesel.Manual<br>hp  530 hp</p>
                 <button>View Details</button>
             </div>
             <div class="product-card">
                 <div class="image-container">
-                    <img src="redcar.jpg" alt="Bike 1">
+                    <img src="dodge_challenger.jpg" alt="Car1">
                 </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs13.62 - 17.42 Lakh</p>
-                <p>Features: Manual, 200 HP, Blue</p>
+                <h4>Dodge challenger </h4>
+                <p>Rs. 43.75 Lacs</p>
+                <p>Features: . SUPERCHARGED 6.2L HIGH-OUTPUT<br>HEMI® V8 ENGINEdiesel.Manual<br>hp  800hp</p>
                 <button>View Details</button>
             </div>
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="whitegwagon.jpg" alt="Bike 1">
-                </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs. 2.05 Cr</p>
-                <p>Features: Manual, 200 HP, Blue</p>
-                <button>View Details</button>
-            </div>
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="blackcar2.jpg" alt="Bike 1">
-                </div>
-                <h4>2022 Yamaha R1</h4>
-                <p>Rs. 49.50 - 52.50 Lakh</p>
-                <p>Features: Manual, 200 HP, Blue</p>
-                <button>View Details</button>
-            </div>
-
+            
 
             <!-- Add more product cards as needed -->
         </section>
     </div>
 
     <div class="pagination">
-        <button>&lt; Previous</button>
-        <button>Next &gt;</button>
+        <a href="next-page1.html">
+            <button>Next &gt;</button>
+        </a>
+
+        <br><br><br>
+        
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section contact-info">
-                <h4>Contact Us</h4>
-                <p>Email: support@veloxio.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
-                <p>Address: 1234 Elm Street, Anytown, USA</p>
-            </div>
-            <div class="footer-section social-media">
-                <h4>Follow Us</h4>
-                <a href="#" class="social-icon">Facebook</a>
-                <a href="#" class="social-icon">Twitter</a>
-                <a href="#" class="social-icon">Instagram</a>
-                <a href="#" class="social-icon">LinkedIn</a>
-            </div>
-            <div class="footer-section site-links">
-                <h4>Site Links</h4>
-                <a href="#">Home</a>
-                <a href="#">Cars</a>
-                <a href="#">Bikes</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-            </div>
+      <div style="width: 100%; text-align: center; padding: 20px 0;">
+        <!-- Heading -->
+        <h2 style="
+        font-size: 28px; 
+        color: #035d91; 
+        margin-bottom: 20px; 
+        font-weight: bold; 
+        text-transform: uppercase; 
+        letter-spacing: 2px; 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+        padding: 10px; 
+        background-color: rgba(255, 255, 255, 0.8); 
+        border-radius: 8px;
+        display: inline-block;
+    ">
+        Popular Brands
+    </h2>
+    
+        <!-- Carousel -->
+        <div style="width: 100%; overflow: hidden; white-space: nowrap;">
+            <marquee behavior="scroll" direction="left" scrollamount="13" loop="-1" style="display: inline-block;">
+                <img src="logo1.jpg" alt="Logo 1" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+                <img src="logo2.jpg" alt="Logo 2" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+                <img src="logo3.jpg" alt="Logo 3" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+                <img src="logo4.jpg" alt="Logo 4" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+                <img src="logo1.jpg" alt="Logo 5" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+                <img src="logo2.jpg" alt="Logo 6" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+                <img src="logo4.jpg" alt="Logo 7" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+                <img src="logo1.jpg" alt="Logo 8" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+                <img src="logo2.jpg" alt="Logo 9" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+                <img src="logo3.jpg" alt="Logo 10" style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
+            </marquee>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Veloxio. All Rights Reserved.</p>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer style="background-color: rgba(0, 0, 0, 0.8); color: #7ecbf790; padding: 30px 20px;">
+        <div class="ofooter-container" style="margin-right:100px; margin-left:200px;">
+            <div class="row" style="display: flex; justify-content:space-between;">
+                <div class="col-md-3" style="margin-right: 100px">
+                    <h4 style="font-family: Arial, sans-serif; color:#035d91; margin-left:40px;">ABOUT VELOXIO</h4>
+                    <br>
+                    <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                        <li>About</li>
+                        <br>
+                        <li>Careers With Us</li>
+                        <br>
+                        <li>Terms and Conditions</li>
+                        <br>
+                        <li>Privacy Policies</li>
+                        <br>
+                        <li>Corporate Policies</li>
+                        <br>
+                        <li>Investors</li>
+                        <br>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+                <div class="col-md-3" style="margin-right: 100px">
+                    <h4 style="font-family: Arial, sans-serif; color:#035d91; margin-left:40px;">CONNECT WITH US</h4>
+                    <br>
+                    <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                        <li>Feedback</li>
+                        <br>
+                        <li>Contact Us</li>
+                        <br>
+                        <li>Advertise With Us</li>
+                        <br>
+                        <li>Become Partner Dealer</li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3" style="margin-right: 100px">
+                    <h4 style="font-family: Arial, sans-serif; color:#035d91; margin-left:40px;">OTHERS</h4>
+                    <br>
+                    <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                        <li>Facebook</li>
+                        <br>
+                        <li>Twitter</li>
+                        <br>
+                        <li>Instagram</li>
+                        <br>
+                        <li>Linkedin</li>
+                        <br>
+                        <li>Customer Support</li>
+                        <br>
+                        <li>Events</li>
+                        
+                    </ul>
+
+                </div>
+                <div class="col-md-3" style="margin-right: 100px">
+                    <h4 style="font-family: Arial, sans-serif; color:#035d91; margin-left:40px;">HOME</h4>
+                    <br>
+                    <ul style="list-style-type: none;font-family: Arial, sans-serif;">
+                        <li>Feedback</li>
+                        <br>
+                        <li>Contact us</li>
+                        <br>
+                        <li>Terms and Conditiions</li>
+                        <br>
+                        <li>Privacy Policy</li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 

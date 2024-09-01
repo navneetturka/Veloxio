@@ -56,3 +56,32 @@ document.getElementById('category').addEventListener('change', function() {
         window.location.href = 'bikes.html'; // Open bikes.html in the same tab
     }
 });
+
+// const brandLogos = document.querySelector('.brand-logos');
+// const leftArrow = document.querySelector('.left-arrow');
+// const rightArrow = document.querySelector('.right-arrow');
+// const logoWidth = 220; // Width of one logo
+// const marginBetweenLogos = 20; // Margin between logos
+// const logosPerSlide = 6; // Number of logos to show per slide
+// let currentSlide = 0;
+
+// function updateCarouselPosition() {
+//     const moveDistance = (logoWidth + marginBetweenLogos) * logosPerSlide;
+//     const newTransform = `translateX(-${currentSlide * moveDistance}px)`;
+//     brandLogos.style.transform = newTransform;
+// }
+
+// rightArrow.addEventListener('click', () => {
+//     const totalSlides = Math.ceil(brandLogos.children.length / logosPerSlide);
+//     if (currentSlide < totalSlides - 1) {
+//         currentSlide++;
+//         updateCarouselPosition();
+//     }
+// });
+
+// leftArrow.addEventListener('click', () => {
+//     if (currentSlide > 0) {
+//         currentSlide--;
+//         updateCarouselPosition();
+//     }
+// });
