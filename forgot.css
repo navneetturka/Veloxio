@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #051923;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #051923; /* Dark blue background */
+    padding: 15px 20px;
+    border-bottom: 2px solid #00A6FB;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 3rem;
+    margin-right: 10px;
+}
+
+/* Navbar links */
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: #00A6FB; /* Light blue color for links */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effects */
+.navbar .nav-links a:hover {
+    background-color: #0e73a1; /* Darker blue on hover */
+    color: #051923; /* Very dark blue text on hover */
+    border-radius: 5px;
+}
+
+/* Login/Sign Up button style */
+.navbar .login-btn {
+    background-color: #00A6FB; /* Light blue button */
+    color: #051923; /* Very dark blue text */
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .login-btn:hover {
+    background-color: #0582CA; /* Slightly darker blue on hover */
+    color: #003554; /* Darker blue text on hover */
+}
+
+
+/* Forgot Password Form styles */
+.forgot-password-form {
+    max-width: 400px;
+    margin: 130px auto;
+    padding: 40px;
+    background: linear-gradient( #253c4d, rgb(24,86,90), #253c4d);
+    border-radius: 10px;
+    box-shadow: 0 0 15px lightblue;
+    color: #0d212d;
+    font-size: 18px;
+}
+
+.forgot-password-form h2 {
+    margin-top: 0;
+    color: #fff;
+    font-weight: 300px;
+}
+
+.forgot-password-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password-form button[type="submit"] {
+    background-color:  #fff;
+    color: #051923;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.forgot-password-form button[type="submit"]:hover {
+    background-color:  rgb(180, 237, 241);}
