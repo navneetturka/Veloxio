@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #051923;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #051923; /* Dark blue background */
+    padding: 15px 20px;
+    border-bottom: 2px solid #00A6FB;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 3rem;
+    margin-right: 10px;
+}
+
+/* Navbar links */
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: #00A6FB; /* Light blue color for links */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effects */
+.navbar .nav-links a:hover {
+    background-color: #0e73a1; /* Darker blue on hover */
+    color: #051923; /* Very dark blue text on hover */
+    border-radius: 5px;
+}
+
+/* Login/Sign Up button style */
+.navbar .login-btn {
+    background-color: #00A6FB; /* Light blue button */
+    color: #051923; /* Very dark blue text */
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .login-btn:hover {
+    background-color: #0582CA; /* Slightly darker blue on hover */
+    color: #003554; /* Darker blue text on hover */
+}
+
+
+/* Container for login and welcome sections */
+.container {
+    margin-top: 80px; /* Adjusted for navbar height */
+    width: 700px;
+    height: 400px;
+    display: flex;
+    box-shadow: 0 0 15px lightblue;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: #081b29; 
+}
+
+/* Left side of the container */
+.left-side {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(#081b29, rgb(1, 83, 88), rgb(1, 83, 88));
+    color: #fff;
+}
+
+.left-side h2 {
+    margin-bottom: 20px;
+}
+
+.left-side form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+
+input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #003f7f;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Right side of the container */
+.right-side {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(1, 83, 88), rgb(1, 83, 88), #081b29, #081b29);
+    color: #fff;
+}
+
+.right-side h2 {
+    margin-bottom: 20px;
+}
+
+.right-side p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
