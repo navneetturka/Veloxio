@@ -8,89 +8,83 @@
 
 /* Body Styling */
 body {
-    background-color: #045362;
-    color: #333;
+    background-color: #11141A;
+    color: #ffffff;
 }
-header {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #051923; /* Dark blue background */
+  padding: 25px 20px;
+  border-bottom: 2px solid #00A6FB;
+  height: 4rem;
 }
 
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
+/* Logo */
+.navbar .logo img {
+  height: 3rem;
+  border-radius: 7rem 7rem ;
+  margin-right: 10px;
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
+.navbar .logo span {
+  color: #00A6FB; /* Light blue for the text */
+  font-size: 24px;
+  font-weight: bold;
 }
 
-header nav ul li a:hover {
-    color: #1F7A8C;
+/* Navbar links */
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
 }
 
-header nav ul li a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #1F7A8C;
-    bottom: -5px;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
+.navbar .nav-links a {
+  color: #00A6FB; /* Light blue color for links */
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-header nav ul li a:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
+/* Hover effects */
+.navbar .nav-links a:hover {
+  background-color: #0e73a1; /* Darker blue on hover */
+  color: #051923; /* Very dark blue text on hover */
+  border-radius: 5px;
 }
 
+/* Login/Sign Up button style */
+.navbar .login-btn {
+  background-color: #00A6FB; /* Light blue button */
+  color: #051923; /* Very dark blue text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .login-btn:hover {
+  background-color: #0582CA; /* Slightly darker blue on hover */
+  color: #003554; /* Darker blue text on hover */
+}
 .search-bar input {
-    padding: 7px;
-    border-radius: 5px;
-    border: none;
-    width: 200px;
-    transition: width 0.3s ease;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+  transition: width 0.3s ease;
 }
 
 .search-bar input:focus {
-    width: 300px;
+  width: 300px;
 }
 
-.breadcrumb {
-    padding: 15px 20px;
-    background-color: #eee;
-    margin: 0;
-    font-size: 14px;
-}
 
-.breadcrumb a {
-    color: #1F7A8C;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
 .carousel-container {
     position: relative;
     width: 70%; /* Reduced width to fit better on the page */
@@ -99,7 +93,7 @@ header nav ul li a:hover::before {
     margin-bottom: 40px;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px #0519233b;
   }
   
   .carousel {
@@ -313,10 +307,12 @@ header nav ul li a:hover::before {
 .today_deals_heading{
     display: flex;
     align-items: center;
+    margin: 20px 20px;
     padding: 2px 20px;
+    color: #ccc;
 }
 .today_deals_heading p a{
-    color:#1F7A8C;
+    color:#00A6FB;
     text-decoration: none;
     padding-left: 20px;
 }
@@ -355,8 +351,10 @@ header nav ul li a:hover::before {
 .today_deals_product_item img{
     width: 100%;
     height: 100%;
+    display: flex;
+    object-fit: cover;
     /* padding: 20px 20px; */
-    background-color: #1F7A8C;
+    background-color: #00A6FB;
 }
 .today_deals_product_item p{
     justify-self: flex-end;
@@ -365,7 +363,7 @@ header nav ul li a:hover::before {
 .discount_Contaienr a{
     padding: 5px 10px;
     font-size: 14px;
-    color:#1F7A8C;
+    color:#00A6FB;
     text-decoration: none;
 }
 .discount_Contaienr a:first-child{
