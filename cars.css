@@ -1,3 +1,4 @@
+
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
@@ -184,10 +185,6 @@ body {
             to { transform: translateX(-100%); }
         }
 
-
-
-
-
 /* PRODUCT CARDS */
 
 .product-listings {
@@ -302,7 +299,6 @@ body {
 }
 
 
-<<<<<<< HEAD
 /* BRANDS */
 h3{
     color: #fff;
@@ -350,11 +346,6 @@ h3{
 /* Keyframes for marquee animation */
 @keyframes marquee {
     from { transform: translateX(0); }
-    to { transform: translateX(-100%); 
+    to { transform: translateX(-100%);
     }
 }
-=======
-
-
-
->>>>>>> 420aa6360fbf5c4ad31ea558163bcdad776080a3

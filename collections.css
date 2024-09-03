@@ -131,13 +131,13 @@ body {
     padding: 20px;
     border-radius: 5px;
     margin-right: 20px;
-    box-shadow: 0 2px 4px #0582CA;
+    box-shadow: 0 2px 4px #3f3b3b;
 }
 
 .sidebar h3 {
     margin-top: 0;
     font-size: 24px;
-    border-bottom: 2px solid #0582CA;
+    border-bottom: 2px solid #3f3b3b;
     padding-bottom: 10px;
 }
 
@@ -164,7 +164,7 @@ body {
 
 .filter select:hover,
 .filter input[type="range"]:hover {
-    border-color: #0582CA;
+    border-color:#3f3b3b;
 }
 
 .filter input[type="range"] {
@@ -180,40 +180,40 @@ body {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    background: #0582CA;
+    background: #3f3b3b;
     cursor: pointer;
     border-radius: 50%;
     transition: background 0.3s ease;
 }
 
 .filter input[type="range"]::-webkit-slider-thumb:hover {
-    background: #1F7A8C;
+    background: #3f3b3b;
 }
 
 .filter input[type="range"]::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #1F7A8C;
+    background: #3f3b3b;
     cursor: pointer;
     border-radius: 50%;
     transition: background 0.3s ease;
 }
 
 .filter input[type="range"]::-moz-range-thumb:hover {
-    background: #1F7A8C;
+    background: #3f3b3b;
 }
 
 .filter input[type="range"]::-ms-thumb {
     width: 20px;
     height: 20px;
-    background: #1F7A8C;
+    background: #3f3b3b;
     cursor: pointer;
     border-radius: 50%;
     transition: background 0.3s ease;
 }
 
 .filter input[type="range"]::-ms-thumb:hover {
-    background: #1F7A8C;
+    background: #3f3b3b;
 }
 
 .price-range {
@@ -285,7 +285,7 @@ body {
 }
 
 .product-card button {
-    background-color: #0582CA;
+    background-color: #3f3b3b;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -295,7 +295,7 @@ body {
 }
 
 .product-card button:hover {
-    background-color: #035d91;
+    background-color: #1f1c1c;
     transform: scale(1.05);
 }
 /* Chat Support Button */
@@ -304,7 +304,7 @@ body {
 }
 
 #chat-toggle {
-    background-color: #0582CA;
+    background-color: #3f3b3b;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -314,7 +314,7 @@ body {
 }
 
 #chat-toggle:hover {
-    background-color: #035d91;
+    background-color: #201d1d;
 }
 
 /* Chat Dialog */
@@ -340,7 +340,7 @@ body {
 }
 
 .chat-header {
-    background: #0582CA;
+    background: #3f3b3b;
     color: #fff;
     padding: 10px;
     border-top-left-radius: 10px;
@@ -376,7 +376,7 @@ body {
 }
 
 #send-message {
-    background-color:#0582CA;
+    background-color:#3f3b3b;
     color: #fff;
     border: none;
     padding: 10px;
@@ -386,7 +386,7 @@ body {
 }
 
 #send-message:hover {
-    background-color: #035d91;
+    background-color: #201e1e;
 }
 
 .pagination {
@@ -396,7 +396,7 @@ body {
 }
 
 .pagination button {
-    background-color:#0582CA;
+    background-color:#3f3b3b;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -407,7 +407,7 @@ body {
 }
 
 .pagination button:hover {
-    background-color: #035d91;
+    background-color: #1b1919;
     transform: scale(1.05);
 }
 
