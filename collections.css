@@ -41,10 +41,9 @@ body {
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
-    /* transition: background-color 0.3s, color 0.3s; */
 }
 .navbar .nav-links a:hover {
-    background-color: #d8e7ee; 
+    background-color:  #a4a3a3; 
     color: #0d0d0e; 
     border-radius: 5px;
     border-bottom: 2px solid #0d0d0e; 
@@ -156,7 +155,8 @@ body {
 .filter input[type="range"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
+    background-color: #a4a3a3;
     border-radius: 5px;
     box-sizing: border-box;
     transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -215,7 +215,9 @@ body {
 .filter input[type="range"]::-ms-thumb:hover {
     background: #3f3b3b;
 }
-
+.filter select option{
+    background-color: #3f3b3b;
+}
 .price-range {
     position: relative;
     display: flex;
@@ -396,7 +398,7 @@ body {
 }
 
 .pagination button {
-    background-color:#3f3b3b;
+    background-color:#333;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -436,7 +438,7 @@ body {
 .footer-column h4 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #1F7A8C;
+    color: #515050;
 }
 
 .footer-column ul {
@@ -472,7 +474,7 @@ body {
 
 .footer-column button {
     padding: 10px;
-    background-color: #1F7A8C;
+    background-color: #333;
     border: none;
     color: #fff;
     font-size: 16px;
@@ -481,7 +483,7 @@ body {
 }
 
 .footer-column button:hover {
-    background-color: #094961;
+    background-color: #272727;
 }
 
 .footer-bottom {
@@ -489,7 +491,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
-    border-top: 1px solid #1F7A8C;
+    border-top: 1px solid #828181;
     margin-top: 40px;
     color: #E1E5F2;
     flex-wrap: wrap;
