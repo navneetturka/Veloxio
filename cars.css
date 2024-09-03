@@ -1,9 +1,194 @@
 body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+
+/* NABARS  */
+
+    
+/* body {
     font-family:'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: #051923;
+    background-color: #000000;
+} */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000; 
+    padding: 5px 12px;
+    height: 3rem;
+    margin-left: 14rem;
+    margin-top: 2rem;
 }
+
+.logo {
+    width: 100px; /* adjust the width to your desired size */
+    height: 100px; /* adjust the height to your desired size */
+    border-radius: 50%; /* make the div a circle */
+    display: flex; /* center the image horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* center the div horizontally */
+}
+
+.logo img {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 4rem;
+}
+
+.navbar .nav-links a {
+    color: #d5dde0; 
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    /* transition: background-color 0.3s, color 0.3s; */
+}
+
+.navbar .nav-links a:hover {
+    background-color: #d8e7ee; 
+    color: #0d0d0e; 
+    border-radius: 5px;
+    border-bottom: 2px solid #0d0d0e; 
+    border-bottom-width: 2px;
+}
+
+/* Desktop layout */
+@media (min-width: 1200px) {
+    .navbar {
+        margin-left: 14rem;
+        margin-top: 2rem;
+    }
+    .navbar .nav-links {
+        gap: 4rem;
+    }
+    .navbar .nav-links a {
+        font-size: 18px;
+    }
+    .navbar .nav-links a:hover {
+        border-bottom-width: 2px;
+    }
+}
+
+/* Tablet layout */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbar {
+        margin-left: 10rem;
+        margin-top: 1.5rem;
+    }
+    .navbar .nav-links {
+        gap: 3rem;
+    }
+    .navbar .nav-links a {
+        font-size: 16px;
+    }
+    .navbar .nav-links a:hover {
+        border-bottom-width: 1.5px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+    .navbar {
+        margin-left: 5rem;
+        margin-top: 1rem;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .navbar .nav-links a {
+        font-size: 14px;
+    }
+    .navbar .nav-links a:hover {
+        border-bottom-width: 1px;
+    }
+}
+
+
+
+
+
+        h2{
+            color: #ffffff;
+            margin-left: 3rem;
+            font-size: 2.6rem;
+            font-family:'Times New Roman', Times, serif;
+         
+        }
+
+
+/* BRANDS */
+        h3{
+            color: #fff;
+            align-content: center;
+        }
+        .car-brands {
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+            background-color: #051923;
+            color: #01080c;
+        }
+        
+        .logo-brands {
+            display: flex;
+            animation: marquee 9s linear infinite; /* Adjust speed as needed */
+        }
+        
+        .logo-brands div {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-brands .image img {
+            width: 100px; 
+            height: 100px; 
+            border-radius: 50%; 
+            object-fit: cover;
+            border: 2px solid #fff; 
+            margin-right: 20px; 
+        }
+        
+        .brand-name {
+            margin-right: 40px;
+            font-size: 14px;
+        }
+        
+        /* Duplicate the logos for continuous effect */
+        .logo-brands::after {
+            content: "";
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Keyframes for marquee animation */
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+
+
+
+
+/* PRODUCT CARDS */
 
 .product-listings {
     display: grid;
@@ -71,8 +256,8 @@ body {
 }
 
 .product-card-back {
-    background-color: #81c3d7;
-    color: #fff;
+    background-color: #f7f7f7;
+    color: #0e0c0c;
     transform: rotateY(180deg);
 }
 
@@ -86,8 +271,8 @@ body {
 }
 
 .product-card-back button {
-    background-color: #fff;
-    color: #1F7A8C;
+    background-color: #0e0a0a;
+    color: #fffcfc;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -97,88 +282,13 @@ body {
 }
 
 .product-card-back button:hover {
-    background-color: #051923;
-    color:#fff;
+    background-color: gray;
+    color:#0c0b0b;
     transform: scale(1.05);
 }
 
 
-
-
-        /* Navbar container */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #051923; /* Dark blue background */
-            padding: 15px 20px;
-            border-bottom: 2px solid #00A6FB;
-            height: 3rem;
-            margin:1rem;
-
-        }
-
-        /* Logo */
-        .navbar .logo img {
-            height: 5rem;
-            border-radius: 7rem 7rem ;
-            margin-right: 10px;
-        }
-
-        .navbar .logo span {
-            color: #00A6FB; /* Light blue for the text */
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        /* Navbar links */
-        .navbar .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .navbar .nav-links a {
-            color: #00A6FB; /* Light blue color for links */
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Hover effects */
-        .navbar .nav-links a:hover {
-            background-color: #0e73a1; /* Darker blue on hover */
-            color: #051923; /* Very dark blue text on hover */
-            border-radius: 5px;
-        }
-
-        /* Login/Sign Up button style */
-        .navbar .login-btn {
-            background-color: #00A6FB; /* Light blue button */
-            color: #051923; /* Very dark blue text */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .navbar .login-btn:hover {
-            background-color: #0582CA; /* Slightly darker blue on hover */
-            color: #003554; /* Darker blue text on hover */
-        }
-
-        h2{
-            color: #00A6FB;
-            margin-left: 3rem;
-            font-size: 2.6rem;
-            font-family:'Times New Roman', Times, serif;
-            /* text-shadow: #81c3d7 2px; */
-        }
-
-
-        /* Scroll Animation */
+        /* Scroll Animation ON WEBPAGES*/
 .scroll-image {
     opacity: 0;
     transform: translateY(100px);
@@ -188,4 +298,10 @@ body {
 .scroll-image.visible {
     opacity: 1;
     transform: translateY(0);
+
 }
+
+
+
+
+
