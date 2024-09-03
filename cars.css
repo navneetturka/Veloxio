@@ -189,3 +189,55 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+/* BRANDS */
+h3{
+    color: #fff;
+    align-content: center;
+}
+.car-brands {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background-color: #051923;
+    color: #00A6FB;
+}
+
+.logo-brands {
+    display: flex;
+    animation: marquee 9s linear infinite; /* Adjust speed as needed */
+}
+
+.logo-brands div {
+    display: flex;
+    align-items: center;
+}
+
+.logo-brands .image img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 2px solid #fff; 
+    margin-right: 20px; 
+}
+
+.brand-name {
+    margin-right: 40px;
+    font-size: 14px;
+}
+
+/* Duplicate the logos for continuous effect */
+.logo-brands::after {
+    content: "";
+    display: flex;
+    align-items: center;
+}
+
+/* Keyframes for marquee animation */
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); 
+    }
+}
