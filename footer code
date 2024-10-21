@@ -1,0 +1,114 @@
+<section class="base">
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/></a>
+                <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"/></a>
+                <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/></a>
+                <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"/></a>
+            </div>
+            <nav class="footer-nav">
+                <ul id="col-1">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#contact">View Gallery</a></li>
+                    <li><a href="#contact">Login/Sign Up</a></li>
+                    
+                </ul><br>
+                <ul id="col-2">
+                    <li><a href="#">Bikes</a></li>
+                    <li><a href="#">Cars</a></li>
+                    <li><a href="#">Drive</a></li>
+                    <li><a href="#">Buy</a> </li>
+                </ul>
+
+                <ul id="col-3">
+                    <li><a href="#">Car Driving</a></li>
+                    <li><a href="#">Data Security</a></li>
+                    <li><a href="#">Car Shop</a></li>
+                    <li><a href="#">Car Servicing</a></li>
+                </ul>
+
+            </nav>
+            <p>© veloxio. All Rights Reserved.</p>
+        </div>
+    </footer>
+</section>
+
+
+--------------------------------------CSSS-----------------------------------------------------
+
+
+/* FOOTER */
+/* .base{
+    margin-top: 0;
+    flex-wrap: wrap;
+    overflow: hidden;
+    top:0;
+} */
+.footer {
+    position: relative;
+    background-color: #312f2f;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 7rem 0 7rem 0;
+    top: 0;
+    margin-top: 0;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    /* margin-left: 8rem; */
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons .icon {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icons .icon:hover {
+    transform: translateY(-5px);
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-nav ul {
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    padding: 1rem;
+    margin: 15px 0;
+}
+
+.footer-nav li {
+    padding-bottom:1.3rem;
+    display: block;
+}
+
+#col-1, #col-2 ,#col-3 {
+    margin-bottom: 0; /* Space between the two columns */
+    margin-right: 50px;
+    margin-top: 0px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
