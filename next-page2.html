@@ -6,39 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection of cars and bikes</title>
     <link rel="stylesheet" href="collections.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    
 </head>
 
 <body>
-    <br>
-    <br>
-
-    <!-- Navbar -->
-    <div class="logo">  
-        <img src="newlogo.jpg" alt="Website Logo">
-    </div>
-    <br>
-
     <div class="navbar">
-        <!-- Hamburger icon -->
-        <div class="hamburger" onclick="toggleMenu()">
-            &#9776;
-        </div>
-        
-        <div class="nav-links">
-            <a href="#">Home</a>
+    <div class="logo">
+        <img src="newlogo.jpg" alt="Logo">
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+        <a href="#">Home</a>
             <a href="#">Contact Us</a>
             <a href="#">Collections</a>
             <a href="#">View Gallery</a>
-            <a href="#">Cart</a>
             <a href="#">Login/Sign Up</a>
-        </div>
     </div>
-        <br>
-        <br>
-
+</div>
 
     <div class="main-content">
         <aside class="sidebar">
@@ -100,24 +87,27 @@
             </div>
 
             <!-- Chat Support -->
-            <div class="chat-support">
-                <button id="chat-toggle">Chat with Us</button>
-            </div>
-
-            <div id="chat-dialog" class="chat-dialog">
-                <div class="chat-header">
-                    <h4>Chat Support</h4>
-                    <button id="chat-close">&times;</button>
+            <button class="chatbot-toggler">
+                <span class="material-symbols-rounded">mode_comment</span>
+                <span class="material-symbols-outlined">close</span>
+              </button>
+              <div class="chatbot">
+                <header>
+                  <h2>Chatbot</h2>
+                  <span class="close-btn material-symbols-outlined">close</span>
+                </header>
+                <ul class="chatbox">
+                  <li class="chat incoming">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p>Hi there <br>How can I help you today?</p>
+                  </li>
+                </ul>
+                <div class="chat-input">
+                  <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                  <span id="send-btn" class="material-symbols-rounded">send</span>
                 </div>
-                <div class="chat-body">
-                    <div class="chat-messages">
-                        <!-- Messages will be displayed here -->
-                    </div>
-                    <textarea id="chat-input" placeholder="Type your question..."></textarea>
-                    <button id="send-message">Send</button>
-                </div>
-            </div>
-
+              </div>
+          
         </aside>
 
 
@@ -211,7 +201,6 @@
         </a>
         <br><br><br>
     </div>
-
     <div style="width: 100%; text-align: center; padding: 20px 0;">
         <!-- Heading -->
         <h2 style="
@@ -231,7 +220,7 @@
         </h2>
 
         <!-- Carousel -->
-        <div style="width: 100%; overflow: hidden; white-space: nowrap;">
+        <div style="width: 100%; overflow: hidden; white-space: nowrap; ">
             <marquee behavior="scroll" direction="right" scrollamount="13" loop="-1" style="display: inline-block;">
                 <img src="logo2.jpg" alt="Logo 2"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
@@ -259,7 +248,7 @@
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo16.jpeg" alt="Logo 8"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
-                    <img src="logo2.jpg" alt="Logo 2"
+                <img src="logo2.jpg" alt="Logo 2"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo3.jpg" alt="Logo 3"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
@@ -285,7 +274,7 @@
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo16.jpeg" alt="Logo 8"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
-                    <img src="logo2.jpg" alt="Logo 2"
+                <img src="logo2.jpg" alt="Logo 2"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo3.jpg" alt="Logo 3"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
@@ -311,7 +300,7 @@
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo16.jpeg" alt="Logo 8"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
-                    <img src="logo2.jpg" alt="Logo 2"
+                <img src="logo2.jpg" alt="Logo 2"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo3.jpg" alt="Logo 3"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
@@ -337,7 +326,7 @@
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo16.jpeg" alt="Logo 8"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
-                    <img src="logo2.jpg" alt="Logo 2"
+                <img src="logo2.jpg" alt="Logo 2"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo3.jpg" alt="Logo 3"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
@@ -363,7 +352,7 @@
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo16.jpeg" alt="Logo 8"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
-                    <img src="logo2.jpg" alt="Logo 2"
+                <img src="logo2.jpg" alt="Logo 2"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo3.jpg" alt="Logo 3"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
@@ -389,7 +378,7 @@
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
                 <img src="logo16.jpeg" alt="Logo 8"
                     style="width: 150px; height: 150px; margin: 0 20px; object-fit: cover; border-radius: 10px;">
-                </marquee>
+            </marquee>
         </div>
     </div>
 
@@ -398,34 +387,38 @@
     <br>
     <br>
 
-        <section class="base">
-            <footer class="footer">
-                <div class="footer-content">
-                    <div class="social-icons">
-                        <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/></a>
-                        <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"/></a>
-                        <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/></a>
-                        <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"/></a>
-                    </div>
-                    <nav class="footer-nav">
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
-                            <li><a href="#contact">Collections</a></li>
-                            <li><a href="#contact">View Gallary</a></li>
-                            <li><a href="#contact">Login/Sign Up</a></li>
-                        </ul><br>
-                        <ul>
-                            <li>Bikes</li>
-                            <li>Cars</li>
-                            <li>Drive</li>
-                            <li>Buy </li>
-                        </ul>
-                    </nav>
-`                    <p>© veloxio. All Rights Reserved.</p>
+    <section class="base">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                            alt="Facebook" /></a>
+                    <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png"
+                            alt="Twitter" /></a>
+                    <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                            alt="Instagram" /></a>
+                    <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                            alt="LinkedIn" /></a>
                 </div>
-            </footer>
-        </section>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#contact">Collections</a></li>
+                        <li><a href="#contact">View Gallary</a></li>
+                        <li><a href="#contact">Login/Sign Up</a></li>
+                    </ul><br>
+                    <ul>
+                        <li>Bikes</li>
+                        <li>Cars</li>
+                        <li>Drive</li>
+                        <li>Buy </li>
+                    </ul>
+                </nav>
+                ` <p>© veloxio. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </section>
 
     <script src="collections.js"></script>
 </body>
