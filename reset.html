@@ -4,40 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veloxio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="logo.jpg">
     <link rel="stylesheet" href="reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-   <div class="navbar">
-    <div class="logo">
-        <img src="logo.png" alt="Website Logo">
-    </div>
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Collections</a>
-        <button class="login-btn">Login/Sign Up</button>
-    </div>
-</div>
-<section>
-    <div class="reset-box" >
-        <form action="change.html">
-         <h1 style="color: white;font-size: 30px;">Reset-Password</h1><br>
-         <div class="input-box">
-            <span class="icon"><box-icon type='solid' name='lock-alt'></box-icon></span>
-            <input type="password" minlength="8" required>
-            <label>Password</label>
-           </div>
-           <div class="input-box">
-            <span class="icon"><box-icon type='solid' name='lock-alt'></box-icon></span>
-            <input type="password" minlength="8" required>
-            <label>Confirm Password</label>
-           </div>
-            <button type="submit">Change</button>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Veloxio</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Veloxio</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">View Gallery</a></li>
+                    <li><a href="login.html">Login/Sign Up</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="reset-password-container">
+        <form action="main.html" class="reset-password-form" onsubmit="return validatePasswords()">
+            <h2>Reset Password</h2>
+            <p>Please enter and confirm your new password.</p>
+            <input type="password" id="new-password" placeholder="New Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm New Password" required>
+            <p id="error-message" style="color: red; display: none;">Passwords do not match!</p>
+            <button type="submit">Reset Password</button>
         </form>
     </div>
-</section>
+    <script src="reset.js"></script>
 </body>
