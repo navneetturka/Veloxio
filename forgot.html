@@ -4,34 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veloxio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="logo.jpg" rel="icon">
     <link rel="stylesheet" href="forgot.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-   <!-- Navbar -->
-   <div class="navbar">
-    <div class="logo">
-        <img src="logo.png" alt="Website Logo">
-    </div>
-    <div class="nav-links">
-        <a href="main.html">Home</a>
-        <a href="index.html">Contact Us</a>
-        <a href="collections.html">Collections</a>
-        <a href="loginpage.htm"><button class="login-btn">Login/Sign Up</button></a>
-    </div>
-</div>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Veloxio</a></span>
 
-    <!-- Forgot Password Form -->
-    <div class="forgot-password-form">
-        <h2>Forgot Password</h2>
-        <p>Enter your Email to reset your password.</p>
-        <form action="reset.html">
-        <input type="email" placeholder="Email"required>
-        <button type="submit">Reset Password</button>
-        </form>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Veloxio</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">View Gallery</a></li>
+                    <li><a href="#">Login/Sign Up</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="forgot-password-container">
+        <div class="forgot-password-box">
+            <h2>Forgot Password</h2>
+            <p>Enter your email address to reset your password.</p>
+            <form action="reset.html">
+                <input type="email" placeholder="Email" required>
+                <button type="submit">Reset Password</button>
+            </form>
+        </div>
     </div>
+    
+
+    <script src="forgot.js"></script>
 </body>
 </html>
