@@ -1,158 +1,336 @@
+/* General Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Quicksand", sans-serif;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #11141A; /* Dark background color similar to the image */
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+body, html {
+    height: 100%;
+    overflow-x: hidden;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-.left-section {
-    width: 40%;
-    margin-right: 200px;
-    margin-top: 70px;
-}
-
-.left-section h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-
-.left-section p {
-    font-size: 18px;
-    color: #b0b0b0; /* Light gray color for the text */
-}
-
-.right-section {
-    width: 55%;
-}
-
-.form-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 48%;
-    padding: 15px;
-    border: none;
-    border-bottom: 1px solid #b0b0b0; /* Light gray border */
-    background-color: #11141A;
-    color: #ffffff;
-    font-size: 16px;
-}
-
-.form-group textarea {
-    width: 100%;
-}
-
-button[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 50px;
-    background-color: #ffffff;
-    color: #11141A;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #bbbbbb;
-}
-
-button[type="submit"]:active {
-    background-color: #888888;
-}
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    color: gray; /* Replace with your theme color */
-    font-size: 25px;
-}
-
-.social-icons a:hover {
-    color: whitesmoke; /* Optional hover effect */
-}
-
-/* Navbar styles */
-.navbar {
-    width: 100%;
-    background-color: #1a1d23; /* Slightly lighter than your page background */
-    padding: 20px 0;
-    position: fixed; /* Make the navbar stay at the top */
+/* Background Video */
+.background-video {
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure the navbar is above other elements */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
 }
 
-.nav-container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
 }
 
-.nav-logo {
-    color: #ffffff;
-    font-size: 24px;
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
-    text-decoration: none;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    margin: 0;
-}
-
-.nav-item {
-    margin-left: 30px;
-}
-
-.nav-link {
-    color: #b0b0b0; /* Light gray color for the links */
-    text-decoration: none;
-    font-size: 16px;
     transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-    color: #ffffff; /* White color on hover */
+.navbar a:hover {
+    color: gray;
 }
-.nav-logo img {
-    height: 50px; /* Adjust height as needed */
-    width: auto;  /* Maintain aspect ratio */
-    display: block; /* Ensures the image is treated as a block-level element */
+
+/* Content */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 5;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.content a {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: rgb(86, 86, 86);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.content a:hover {
+    background-color: black;
+}
+
+/* Video Wrapper for Background */
+.video-wrapper {
+    position: relative;
+    height: 100vh; /* Limit to full viewport height */
+    overflow: hidden;
+}
+
+/* News Section Styling */
+.news-section {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+.news-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.news-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.news-content.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.news-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.news-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.news-text p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.news-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.news-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Automatic Transition */
+.news-content:nth-child(1) { animation-delay: 0s; }
+.news-content:nth-child(2) { animation-delay: 5s; }
+.news-content:nth-child(3) { animation-delay: 10s; }
+
+.news-text {
+    flex: 1;
+}
+
+.news-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.news-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.news-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.news-navigation .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.news-navigation .dot.active {
+    background-color: #333;
+}
+
+.view-more {
+    margin-left: 20px;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animation */
+.news-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.news-content {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Vehicles Section */
+.vehicles-section {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    padding: 50px 20px;
+    background-color: #ffffff; /* White background */
+}
+
+.vehicle-content {
+    flex: 1;
+    margin: 0 10px; /* Reduced margin for better fit */
+    position: relative; /* For child positioning */
+    height: 400px; /* Set a fixed height for each vehicle section */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays within the borders */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align the content horizontally */
+    justify-content: center; /* Center align the content vertically */
+    text-align: center; /* Center text */
+    color: white; /* Set text color to white */
+}
+
+/* Specific background images for cars and bikes */
+.car {
+    background-image: url('porsche.jpg'); /* Replace with your car image path */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the background image */
+}
+
+.bike {
+    background-image: url('harley.jpeg'); /* Replace with your bike image path */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the background image */
+}
+
+/* Overlay for better text visibility */
+.overlay {
+    position: absolute; /* Position overlay over the content */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1; /* Ensure it sits behind the text */
+}
+
+.vehicle-content h2 {
+    font-size: 30px; /* Increased font size for headings */
+    margin: 10px 0; /* Reduced margin for better spacing */
+    z-index: 2; /* Ensure text appears above the overlay */
+}
+
+.vehicle-content p {
+    font-size: 20px; /* Keep the increased font size */
+    margin: 5px 0; /* Reduced margin for better spacing */
+    z-index: 2; /* Ensure text appears above the overlay */
+    opacity: 0.8; /* Adjust transparency */
 }
 
 
+.discover-more {
+    color: #ffffff; /* White text color */
+    font-size: 24px; /* Increased text size for 'Discover More' */
+    font-weight: 400; /* Less bold */
+    cursor: pointer; /* Change cursor on hover */
+    transition: color 0.3s; /* Smooth color transition */
+    z-index: 2; /* Ensure text appears above the overlay */
+}
+
+.discover-more:hover {
+    color: #ccc; /* Lighter grey on hover */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .vehicles-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .navbar {
+        padding: 10px 20px;
+    }
+    
+    .navbar a {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+    
+    .content h1 {
+        font-size: 36px;
+    }
+    
+    .content p {
+        font-size: 16px;
+    }
+    
+    .content a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .news-item {
+        flex-direction: column;
+    }
+
+    .news-image {
+        margin-top: 20px;
+    }
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in to main sections */
+.video-wrapper, .news-section, .vehicles-section {
+    animation: fadeIn 1.5s ease-in-out;
+}
