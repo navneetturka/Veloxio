@@ -3,148 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veloxio - Find Your Perfect Ride</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="logo">
-        <img src="newlogo.jpg" alt="Website Logo">
-    </div>
-    <br>
-    <!-- <hr> -->
-<div class="navbar">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="carex.jpeg" alt="Veloxio Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     
-    <div class="nav-links">
-        <a href="main.html">Home</a>
-        <a href="index.html">Contact Us</a>
-        <a href="collections.html">Collections</a>
-        <a href="#">Add to Cart</a>
-        <a href="cars-home-page.html">View Gallery</a>
-        <a href="login.html">Login/Sign Up</a>
-    </div>
-</div>
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="hero-content">
-            <h1>Your Dream Ride Awaits</h1>
-            <p>Explore the latest models of cars and bikes tailored to your style.</p>
-            <div class="cta-buttons">
-                <a href="Cars-desc.html" class="cta-button">Shop Cars</a>
-                <a href="#" class="cta-button">Shop Bikes</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Featured Vehicles Section -->
-    <section id="featured-vehicles" class="featured-vehicles">
-        <div class="container">
-            <h2>Featured Vehicles</h2>
-            <div class="vehicle-grid">
-                <div class="vehicle-card">
-                    <img src="merce.jpg" alt="Car Model 1">
-                    <h3>Luxury Sedan</h3>
-                    <p>$30,000</p>
-                </div>
-                <div class="vehicle-card">
-                    <img src="porsche.jpg" alt="Bike Model 1">
-                    <h3>Porsche</h3>
-                    <p>$15,000</p>
-                </div>
-                <!-- Add more vehicle cards as needed -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="why-choose-us">
-        <div class="container">
-            <h2>Why Choose Us</h2>
-            <div class="benefits">
-                <div class="benefit">
-                    <img src="buzz.jpg" alt="Premium Quality">
-                    <h3>Premium Quality</h3>
-                    <p>Only the best vehicles on the market.</p>
-                </div>
-                <div class="benefit">
-                    <img src="buzz.jpg" alt="Best Prices">
-                    <h3>Best Prices</h3>
-                    <p>Competitive pricing for all our vehicles.</p>
-                </div>
-                <div class="benefit">
-                    <img src="buzz.jpg" alt="24/7 Support">
-                    <h3>24/7 Support</h3>
-                    <p>We're here to help anytime, any day.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>What Our Customers Say</h2>
-            <div class="testimonial-slider">
-                <blockquote>
-                    <p>"Veloxio made buying my dream car a reality. Highly recommend!"</p>
-                    <footer>- John Doe</footer>
-                </blockquote>
-                <blockquote>
-                    <p>"The bike selection is incredible. I'm thrilled with my purchase."</p>
-                    <footer>- Jane Smith</footer>
-                </blockquote>
-                <!-- Add more testimonials as needed -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Get in Touch</h2>
+    <div class="container">
+        <div class="left-section">
+            <h1>Get in touch.</h1>
             <p>Looking for your next ride? Let us know what you're looking for, and we'll help you hit the road in style.</p>
-            <form class="contact-form">
+        </div>
+        <div class="right-section">
+            <form id="contactForm">
                 <div class="form-group">
-                    <input type="text" placeholder="First Name">
-                    <input type="text" placeholder="Last Name">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Company">
-                    <input type="email" placeholder="Email Address">
+                    <input type="text" id="company" name="company" placeholder="Company" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
                 </div>
-                <textarea placeholder="Message"></textarea>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+                </div>
                 <button type="submit">Send</button>
+                <div class="social-icons">
+                    <a href="https://your-facebook-profile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://your-twitter-profile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://your-instagram-profile" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
             </form>
+            <div class="loading-spinner" id="loadingSpinner" style="display: none;"></div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container footer-content">
-            <div class="social-media">
-                <h3>Stay Connected</h3>
-                <!-- Social Media Icons -->
-            </div>
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Email: support@veloxio.com</p>
-                <p>Phone: +123 456 7890</p>
-            </div>
-        </div>
-    </footer>
-
-    
+    <script src="script.js"></script>
 </body>
 </html>
