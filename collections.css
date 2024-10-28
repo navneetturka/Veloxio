@@ -1,116 +1,296 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
 }
 
-body {
-    background-color: #000;
+
+/* ===== Colours ===== */
+:root{
+    --body-color: #d5f0f9;
+    --nav-color: #009bd8;
+    --side-nav: #010718;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+    --card-background-color: #6dcaee;
+    --footer-color: #009bd8;
 }
 
-.logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
+body{
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+body.dark{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+    --card-background-color: #b7b6b6;
+    --footer-color: #515050;
+}
+
+nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo img {
+    top: 0;
+    left: 0;
+    height: 70px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background-color: var(--nav-color);
+    z-index: 100;
 }
 
-.navbar {
+body.dark nav{
+    border: 1px solid #393838;
+
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
-    padding: 1rem;
+}
+
+nav .nav-bar .sidebarOpen{
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo a{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu .logo-toggle{
+    display: none;
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+
+.nav-bar .darkLight-searchBox{
+    display: flex;
+    align-items: center;
+}
+
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.dark-light i,
+.searchToggle i{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle i.cancel{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle.active i.cancel{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.searchToggle.active i.search{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchBox{
     position: relative;
 }
 
-.nav-links {
+.searchBox .search-field{
+    position: absolute;
+    bottom: -85px;
+    right: 5px;
+    height: 50px;
+    width: 300px;
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
-.nav-links a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px;
-    transition: color 0.3s ease;
+.searchToggle.active ~ .search-field{
+    bottom: -74px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
-.nav-links a:hover {
-    color: #035d91;
+.search-field::before{
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: -4px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--nav-color);
+    transform: rotate(-45deg);
+    z-index: -1;
 }
 
-.hamburger {
-    display: none;
-    font-size: 1.5rem;
+.search-field input{
+    height: 100%;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--search-text);
+    background-color: var(--search-bar);
+}
+
+body.dark .search-field input{
+    color: var(--text-color);
+}
+
+.search-field i{
+    position: absolute;
+    color: var(--nav-color);
+    right: 15px;
+    font-size: 22px;
     cursor: pointer;
-    color: #333;
 }
 
-/* Tablet and Desktop layout */
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex;
-    }
-    .hamburger {
-        display: none; /* Hide hamburger on larger screens */
-    }
+body.dark .search-field i{
+    color: var(--text-color);
 }
 
-/* Mobile layout */
-@media (max-width: 767px) {
-    .hamburger {
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen{
         display: block;
     }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        background-color: #000;
-        position: absolute;
-        top: 100%;
-        left: 0;
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: var(--side-nav);
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+
+    nav.active .menu{
+        left: -0%;
+    }
+
+    nav.active .nav-bar .navLogo a{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu .logo-toggle{
+        display: block;
         width: 100%;
-        padding: 1rem;
-        border-top: 1px solid #ddd;
-    }
-
-    .nav-links a {
-        color: #d5dde0;
-        text-align: center;
-        padding: 10px 0;
-        border-bottom: 1px solid #d5dde0;
-    }
-
-    .navbar.active .nav-links {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-}
 
-.search-bar input {
-    padding: 7px;
-    border-radius: 5px;
-    border: none;
-    width: 200px;
-    transition: width 0.3s ease;
-}
+    .logo-toggle .siderbarClose{
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
 
-.search-bar input:focus {
-    width: 300px;
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
 }
 
 .main-content {
@@ -123,7 +303,7 @@ body {
     width: 90%;
     height: 60%;
     max-width: 300px;
-    background-color: #fafafa;
+    background-color: var(--card-background-color);
     padding: 20px;
     border-radius: 8px;
     margin: 0 auto 20px;
@@ -135,7 +315,7 @@ body {
 .sidebar h3 {
     margin-top: 0;
     font-size: 24px;
-    border-bottom: 2px solid #035d91;
+    border-bottom: 2px solid #333;
     padding-bottom: 8px;
 }
 
@@ -165,8 +345,8 @@ body {
 
 .filter select:hover,
 .filter input[type="range"]:hover {
-    background-color: #e9f3ff;
-    border-color: #035d91;
+    background-color: #c9c8c8;
+    border-color: #333;
 }
 
 .filter input[type="range"] {
@@ -219,7 +399,7 @@ body {
 }
 
 .product-card {
-    background-color: #fff;
+  background-color: var(--card-background-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -299,14 +479,14 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #333;
+    background: #fff;
     transition: all 0.2s ease;
   }
   body.show-chatbot .chatbot-toggler {
     transform: rotate(90deg);
   }
   .chatbot-toggler span {
-    color: #fff;
+    color: #333;
     position: absolute;
   }
   .chatbot-toggler span:last-child,
@@ -493,8 +673,7 @@ body {
 }
 .footer {
     position: relative;
-    background-color: #515050;
-    
+    background-color: var(--footer-color);
     color: white;
     text-align: center;
     padding: 40px 0;
@@ -529,19 +708,19 @@ body {
     transform: translateY(-5px); 
 }
 
-.footer-nav ul {
+.footerr ul {
     list-style: none;
     padding: 0;
     display: inline-block; 
     margin-top: 15px; 
 }
 
-.footer-nav li {
+.footerr li {
     display: inline;
     margin: 0 15px;
 }
 
-.footer-nav a {
+.footerr a {
     color: white;
     text-decoration: none;
     font-weight: bold;
