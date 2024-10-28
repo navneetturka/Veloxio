@@ -3,56 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Cars & Bikes Marketplace</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="newlogo.jpg" alt="Veloxio Logo">
-            </a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="main.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="index.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="collections.html" class="nav-link">Collections</a></li>
-                <li class="nav-item"><a href="login.html" class="nav-link">Login/Signup</a></li>
-            </ul>
+
+
+
+    <!-- Video and Main Content Wrapper -->
+    <div class="video-wrapper">
+        <!-- Background Video Section -->
+        <video autoplay muted loop class="background-video" id="backgroundVideo">
+            <source src="car.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#">RACING</a>
+            <a href="#">SPORTS CARS</a>
+            <a href="#">COLLECTIONS</a>
+            <a href="#">EXPERIENCES</a>
+            <a href="#">ABOUT US</a>
+            <a href="#" class="search-link">SEARCH</a>
         </div>
-    </nav>
-    
-    <div class="container">
-        <div class="left-section">
-            <h1>Get in touch.</h1>
-            <p>Looking for your next ride? Let us know what you're looking for, and we'll help you hit the road in style</p>
-        </div>
-        <div class="right-section">
-            <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="company" name="company" placeholder="Company" required>
-                    <input type="email" id="email" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Send</button>
-                <div class="social-icons">
-                    <a href="https://your-facebook-profile" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://your-twitter-profile" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://your-instagram-profile" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-            </form>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h1>Unleash Your Passion</h1>
+            <p>Discover Cars & Bikes Like Never Before</p>
+            <a href="#">DISCOVER</a>
         </div>
     </div>
 
-   
+    <!-- News Section -->
+<section class="news-section">
+    <div class="news-wrapper">
+        <!-- News Items -->
+        <div class="news-content active">
+            <div class="news-text">
+                <h2>Experience the Pinnacle of Precision: The New Porsche 12Cilindri</h2>
+                <p>Discover the latest innovation from Porsche, the 12Cilindri. This remarkable machine not only pays homage to the brand's rich heritage but also introduces groundbreaking technology that redefines performance.
+                 With its muscular design and state-of-the-art engineering, the 12Cilindri promises an unparalleled driving experience that blends power with finesse. 
+                 Dive into the world of luxury and speed—where every detail is meticulously crafted for the true enthusiast</p>
+            </div>
+            <div class="news-image">
+                <img src="porsche.jpg" alt="Porsche Car">
+            </div>
+        </div>
+        
+        <div class="news-content">
+            <div class="news-text">
+                <h2>Unleash the Beast: The All-New BMW</h2>
+                <p>Experience the thrill of driving with the all-new BMW, a vehicle designed for those who crave power and style. 
+                This striking model showcases an aggressive design, advanced engineering, and an exhilarating performance that redefines what it means to drive a luxury car. With innovative features and unparalleled handling, 
+                the new BMW sets the standard for modern performance vehicles. Get ready to unleash your inner driver!</p>
+            </div>
+            <div class="news-image">
+                <img src="bmw.jpeg" alt="Ferrari Car">
+            </div>
+        </div>
+
+        <div class="news-content">
+            <div class="news-text">
+                <h2>Lamborghini: A Symphony of Speed and Elegance</h2>
+                <p>Meet the newest addition to the Lamborghini lineup, where cutting-edge technology meets breathtaking design. 
+                This supercar is not just built for speed; it's an artful expression of automotive excellence. With its aggressive stance and finely tuned performance, 
+                the new Lamborghini delivers an exhilarating ride that ignites your passion for driving. Discover the harmony of power and elegance that makes this model an icon of the automotive world</p>
+            </div>
+            <div class="news-image">
+                <img src="lambo.jpeg" alt="Tesla Car">
+            </div>
+        </div>
+
+<!-- Navigation for News -->
+<div class="news-navigation">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="view-more">View More ➔</span>
+</div>
+
+
+    </div>
+</section>
+
+    
+    <!-- Vehicles Section -->
+    <div class="vehicles-section">
+        <div class="vehicle-content car">
+            <div class="overlay"></div>
+            <h2>CAR</h2>
+            <p>Experience the thrill of driving.</p>
+            <div class="discover-more">Discover More ➔</div>
+        </div>
+        <div class="vehicle-content bike">
+            <div class="overlay"></div>
+            <h2>BIKE</h2>
+            <p>Ride the roads with freedom.</p>
+            <div class="discover-more">Discover More ➔</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
