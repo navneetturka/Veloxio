@@ -68,3 +68,4 @@ document.addEventListener("DOMContentLoaded", function () {
         // You can define your logic to show more news or redirect to another page
     });
 });
+
