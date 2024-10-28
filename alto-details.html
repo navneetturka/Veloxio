@@ -1,176 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Model 1 - Details</title>
+    <link rel="stylesheet" href="details.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alto Details</title>
-    <style>
-        body {
-            font-family: "Quicksand", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color:  #051923;
-        }
-
-        h1{
-            background-color: #81c3d7;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .slider {
-            width: 50%; 
-            height: 370px; 
-            margin: 20px auto;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative; 
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 100%;
-        }
-
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%; 
-            object-fit: cover; 
-            border-radius: 10px;
-        }
-
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            position: absolute; /* Position buttons absolutely within the slider */
-            bottom: 10px; /* Position them at the bottom */
-            width: 100%;
-            padding: 0 20px; /* Add padding for spacing from the slider edges */
-            box-sizing: border-box; /* Ensure padding doesn't affect width */
-        }
-
-        .nav-buttons button {
-            background-color: #73bbd1;
-            color: white;
-            border: none;
-            padding: 10px;
-            margin: 0 5px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .nav-buttons button:hover {
-            background-color: #eaeaea;
-            color: #1F7A8C;
-        }
-
-        .description {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .description h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .description p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 10px;
-        }
-    </style>
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-    
-        <h1>Alto - Car Details</h1>
-    
+    <br>
+    <br>
 
-    <!-- Slider Section -->
-    <section class="slider">
-        <div class="slides">
-            <div class="slide">
-                <img src="Pictures/alto1.1.jpg" alt="alto">
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Veloxio</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Veloxio</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">View Gallery</a></li>
+                    <li><a href="#">Login/Sign Up</a></li>
+                </ul>
             </div>
-            <div class="slide">
-                <img src="Pictures/alto1.1.webp" alt="alto">
-            </div>
-            <div class="slide">
-                <img src="Pictures/alto1.2.webp" alt="alto">
-            </div>
-            <div class="slide">
-                <img src="Pictures/alto1.3.webp" alt="alto">
-            </div>
-            <div class="slide">
-                <img src="Pictures/alto1.4.webp" alt="alto">
-            </div>
-            <div class="slide">
-                <img src="Pictures/alto1.5.webp" alt="alto">
-            </div>
-            <div class="slide">
-                <img src="Pictures/alto1.6.webp" alt="alto">
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="nav-buttons">
-            <button onclick="prevSlide()">Previous</button>
-            <button onclick="nextSlide()">Next</button>
+    </nav>
+<br>
+<br>
+<br>
+    <!-- Photo Slider -->
+    <div class="carousel-container">
+        <div class="carousel">
+          <div class="slide"><img src="alto1.1.jpg" alt="Image 1"></div>          
+          <div class="slide"><img src="alto1.1.webp" alt="Image 4"></div>
+          <div class="slide"><img src="alto1.2.webp" alt="Image 5"></div>
+          <div class="slide"><img src="alto1.3.webp" alt="Image 3"></div>
+          <div class="slide"><img src="alto1.4.webp" alt="Image 3"></div>
+          <div class="slide"><img src="alto1.5.webp" alt="Image 3"></div>
+          <div class="slide"><img src="alto1.6.webp" alt="Image 3"></div>
+alto1.1.jpg
         </div>
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+        <div class="dots-container"></div>
+      </div>
+
+    <!-- Car Details Section -->
+    <div class="details-section">
+        <!-- Navigation Bar -->
+        <div class="details-nav">
+          <a href="#overview">Overview</a>
+          <a href="#features">Features</a>
+          <a href="#specifications">Specifications</a>
+        </div>
+      
+        <!-- Overview Section -->
+        <div id="overview" class="detail-div">
+          <h2>Overview</h2>
+          <p>Registration Year: 2020</p>
+          <p>Insurance: Comprehensive</p>
+          <p>Fuel Type: Petrol</p>
+          <p>Seats: 5</p>
+          <p>Transmission: Automatic</p>
+          <p>Year of Manufacture: 2019</p>
+        </div>
+      
+        <!-- Features Section -->
+        <div id="features" class="detail-div">
+          <h2>Features</h2>
+          <ul>
+            <li>Automatic Climate Control</li>
+            <li>Rear AC Vents</li>
+            <li>Engine Start/Stop Button</li>
+            <li>Rear Camera</li>
+            <li>Wireless Charger</li>
+          </ul>
+        </div>
+      
+        <!-- Specifications Section -->
+        <div id="specifications" class="detail-div">
+          <h2>Specifications</h2>
+          <p>Engine: 2.0L Turbocharged</p>
+          <p>Power: 250 HP</p>
+          <p>Transmission: 8-Speed Automatic</p>
+          <p>Drive Type: All-Wheel Drive</p>
+          <p>Mileage: 15 km/l</p>
+          <p>Fuel: Petrol</p>
+        </div>
+      </div>
+
+<!-- FOOTER  -->
+      <section class="base">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/></a>
+                    <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"/></a>
+                    <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/></a>
+                    <a href="#" class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"/></a>
+                </div>
+                <nav class="footer-nav">
+                    <ul id="col-1">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#contact">View Gallery</a></li>
+                        <li><a href="#contact">Login/Sign Up</a></li>
+                        
+                    </ul><br>
+                    <ul id="col-2">
+                        <li><a href="#">Bikes</a></li>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Drive</a></li>
+                        <li><a href="#">Buy</a> </li>
+                    </ul>
+    
+                    <ul id="col-3">
+                        <li><a href="#">Car Driving</a></li>
+                        <li><a href="#">Data Security</a></li>
+                        <li><a href="#">Car Shop</a></li>
+                        <li><a href="#">Car Servicing</a></li>
+                    </ul>
+    
+                </nav>
+                <p>© veloxio. All Rights Reserved.</p>
+            </div>
+        </footer>
     </section>
 
-    <!-- Car Description Section -->
-    <section class="description">
-        <h2>Alto</h2>
-        <p><strong>Price:</strong> Rs. 3.99 - 5.96 Lakh</p>
-        <p><strong>Engine:</strong> 1.0L, 3-cylinder, 67 BHP</p>
-        <p><strong>Transmission:</strong> Manual</p>
-        <p><strong>Fuel Type:</strong> Petrol</p>
-        <p><strong>Mileage:</strong> 21.63 kmpl</p>
-        <p><strong>Features:</strong> Power Steering, Air Conditioning, ABS, Dual Airbags</p>
-    </section>
-
-    <script>
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function showSlide(index) {
-            if (index >= slides.length) {
-                currentIndex = 0;
-            } else if (index < 0) {
-                currentIndex = slides.length - 1;
-            } else {
-                currentIndex = index;
-            }
-            const offset = -currentIndex * 100;
-            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
-        }
-
-        function nextSlide() {
-            showSlide(currentIndex + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentIndex - 1);
-        }
-
-        // Auto-slide (optional)
-        setInterval(nextSlide, 5000); // Change slide every 5 seconds
-    </script>
-
+      
+    <script src="details.js"></script>
 </body>
 </html>
