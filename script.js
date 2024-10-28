@@ -1,36 +1,70 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('#contactForm');
-    const sendButton = document.querySelector('button[type="submit"]');
-    const inputs = document.querySelectorAll('input, textarea');
+// Array of video file paths (ensure these paths are correct)
+const videos = [
+    'car.mp4',  // Path to the first video file
+    'video.mp4', // Path to the second video file
+    'race.mp4',  // Path to the third video file
+    'bmw.mp4'    // Path to the fourth video file
+];
 
-    // Form submission handler
-    form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent actual form submission
+// Video change functionality
+let videoIndex = 0;
+const videoElement = document.getElementById('backgroundVideo');
 
-        // Simulate a form submission or show a success message
-        alert('Thank you for reaching out! We will get back to you shortly.');
+// Function to change video with a quick fade effect
+function changeVideo() {
+    videoElement.style.opacity = 0; // Start fade-out
 
-        // Clear the form after submission
-        inputs.forEach(input => {
-            input.value = ''; // Clears each input and textarea
+    setTimeout(() => {
+        videoIndex = (videoIndex + 1) % videos.length; // Update video index
+        videoElement.src = videos[videoIndex]; // Change video source
+        videoElement.load(); // Reload the video
+        videoElement.play(); // Play the new video
+        videoElement.style.opacity = 1; // Fade in
+    }, 200); // Matches the fade-out duration
+}
+
+// Change video every 10 seconds
+setInterval(changeVideo, 10000);
+
+// News section functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const newsItems = document.querySelectorAll(".news-content");
+    const dots = document.querySelectorAll(".dot");
+    const viewMore = document.querySelector(".view-more");
+    let currentIndex = 0;
+
+    function showNextNews() {
+        newsItems[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % newsItems.length;
+        newsItems[currentIndex].classList.add("active");
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    }
+
+    // Initialize the dots on page load
+    updateDots();
+
+    // Change news item every 5 seconds
+    setInterval(showNextNews, 5000); // Change every 5 seconds
+
+    // Add event listeners for dots
+    dots.forEach(dot => {
+        dot.addEventListener("click", () => {
+            newsItems[currentIndex].classList.remove("active");
+            currentIndex = parseInt(dot.getAttribute("data-index"));
+            newsItems[currentIndex].classList.add("active");
+            updateDots(); // Update the dot indicators
         });
     });
 
-    // Hover effect for send button
-    sendButton.addEventListener('mouseenter', function () {
-        sendButton.style.backgroundColor = '#bbbbbb'; // Change color on hover
-    });
-
-    sendButton.addEventListener('mouseleave', function () {
-        sendButton.style.backgroundColor = '#ffffff'; // Revert to original color
-    });
-
-    sendButton.addEventListener('mousedown', function () {
-        sendButton.style.backgroundColor = '#888888'; // Even darker on click
-    });
-
-    sendButton.addEventListener('mouseup', function () {
-        sendButton.style.backgroundColor = '#bbbbbb'; // Back to hover color
+    // Add event listener for "View More"
+    viewMore.addEventListener("click", () => {
+        alert("View more news functionality to be implemented.");
+        // You can define your logic to show more news or redirect to another page
     });
 });
-
