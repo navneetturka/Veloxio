@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize the dots on page load
     updateDots();
 
-    // Change news item every 5 seconds
-    setInterval(showNextNews, 5000); // Change every 5 seconds
+    // Change news item every 3 seconds (3000 ms)
+    setInterval(showNextNews, 2000); // Adjusted to 3 seconds
 
     // Add event listeners for dots
     dots.forEach(dot => {
@@ -68,4 +68,3 @@ document.addEventListener("DOMContentLoaded", function () {
         // You can define your logic to show more news or redirect to another page
     });
 });
-
